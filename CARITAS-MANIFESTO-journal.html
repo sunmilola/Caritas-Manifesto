@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARITAS MANIFESTO - 40 Day Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #5a7a6d;
+            --accent-gold: #c49a6c;
+            --dark-text: #2c3e38;
+            --medium-text: #5a6b63;
+            --light-bg: #f8f7f4;
+            --cream: #fdfcf9;
+            --border: #ddd9d0;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #f0ede6, #e8e5dc);
+            font-family: 'Lora', serif;
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        .page {
+            max-width: 850px;
+            margin: 40px auto;
+            background: var(--cream);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Cover Page */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 60px;
+            background: linear-gradient(135deg, #4a6358 0%, #3d5247 50%, #2c3e38 100%);
+            color: #f8f7f4;
+            position: relative;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(196, 154, 108, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(196, 154, 108, 0.08) 0%, transparent 50%);
+        }
+
+        .cover-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-ornament {
+            width: 100px;
+            height: 2px;
+            background: var(--accent-gold);
+            margin: 0 auto 40px;
+            position: relative;
+        }
+
+        .cover-ornament::before,
+        .cover-ornament::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            top: -3px;
+        }
+
+        .cover-ornament::before { left: -15px; }
+        .cover-ornament::after { right: -15px; }
+
+        .cover-title {
+            font-family: 'Cinzel', serif;
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+            color: #f8f7f4;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .cover-subtitle {
+            font-size: 18px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 50px;
+            font-weight: 500;
+        }
+
+        .cover-description {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+            color: rgba(248, 247, 244, 0.9);
+        }
+
+        .cover-journal-type {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(248, 247, 244, 0.7);
+            border-top: 1px solid rgba(196, 154, 108, 0.3);
+            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
+            padding: 20px 40px;
+            margin-top: 60px;
+        }
+
+        /* Interior Pages */
+        .interior-page {
+            padding: 60px 70px;
+            min-height: 100vh;
+        }
+
+        /* How to Use Section */
+        .intro-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: var(--primary-green);
+            text-align: center;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 2px;
+            background: var(--accent-gold);
+            margin: 0 auto 35px;
+        }
+
+        .intro-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--medium-text);
+            margin-bottom: 30px;
+            text-align: center;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .checklist {
+            background: var(--light-bg);
+            border-left: 4px solid var(--primary-green);
+            padding: 25px 30px;
+            margin: 30px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .checklist-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .check-icon {
+            color: var(--primary-green);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Daily Rhythm Box */
+        .rhythm-box {
+            background: linear-gradient(135deg, #f8f7f4 0%, #f0ede6 100%);
+            border: 2px solid var(--border);
+            padding: 35px;
+            margin: 40px 0;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .rhythm-title {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--primary-green);
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .rhythm-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .rhythm-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .step-number {
+            background: var(--primary-green);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+            padding-top: 4px;
+        }
+
+        .step-action {
+            font-weight: 600;
+            color: var(--dark-text);
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .step-description {
+            color: var(--medium-text);
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        /* Tips Section */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 25px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .tip-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .tip-title {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .tip-text {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--medium-text);
+        }
+
+        /* Contents Section */
+        .contents-list {
+            margin: 30px 0;
+        }
+
+        .contents-week {
+            margin-bottom: 35px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .contents-week:last-child {
+            border-bottom: none;
+        }
+
+        .week-title {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            color: var(--primary-green);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .week-items {
+            padding-left: 25px;
+        }
+
+        .week-item {
+            font-size: 14px;
+            color: var(--medium-text);
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .week-item::before {
+            content: '•';
+            position: absolute;
+            left: -15px;
+            color: var(--accent-gold);
+        }
+
+        /* Personal Info Page */
+        .form-section {
+            margin-bottom: 45px;
+        }
+
+        .form-title {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .form-field {
+            margin-bottom: 25px;
+        }
+
+        .field-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--dark-text);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .field-input {
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-bottom: 2px solid var(--border);
+            background: transparent;
+            font-family: 'Lora', serif;
+            font-size: 14px;
+            color: var(--dark-text);
+            transition: border-color 0.3s;
+        }
+
+        .field-input:focus {
+            outline: none;
+            border-bottom-color: var(--primary-green);
+        }
+
+        .field-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            border: 2px solid var(--border);
+            background: white;
+            font-family: 'Lora', serif;
+            font-size: 14px;
+            color: var(--dark-text);
+            resize: vertical;
+            border-radius: 4px;
+            line-height: 1.8;
+        }
+
+        .field-textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+
+        .checkbox-group {
+            background: var(--light-bg);
+            padding: 25px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+
+        .checkbox-field {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-field:last-child {
+            margin-bottom: 0;
+        }
+
+        .checkbox-box {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary-green);
+            border-radius: 3px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        .checkbox-label {
+            font-size: 14px;
+            color: var(--dark-text);
+        }
+
+        /* Week Header */
+        .week-header {
+            text-align: center;
+            padding: 50px 0 40px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, #4a6358 100%);
+            color: white;
+            margin: -60px -70px 50px;
+        }
+
+        .week-number {
+            font-family: 'Cinzel', serif;
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .week-theme {
+            font-size: 18px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+        }
+
+        .week-days {
+            font-size: 14px;
+            margin-top: 15px;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        /* Daily Entry */
+        .day-header {
+            margin-bottom: 35px;
+        }
+
+        .day-number {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+        }
+
+        .day-title {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .day-date {
+            font-size: 14px;
+            color: var(--medium-text);
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            display: inline-block;
+            min-width: 250px;
+        }
+
+        /* Truth Box */
+        .truth-box {
+            background: linear-gradient(135deg, #f8f7f4 0%, #f0ede6 100%);
+            border-left: 5px solid var(--accent-gold);
+            padding: 30px;
+            margin: 35px 0;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .truth-label {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-green);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .truth-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--dark-text);
+            font-weight: 500;
+        }
+
+        /* Verse Box */
+        .verse-box {
+            background: white;
+            border: 3px solid var(--primary-green);
+            padding: 35px;
+            margin: 40px 0;
+            text-align: center;
+            border-radius: 4px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .verse-box::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 35px;
+            font-size: 80px;
+            color: rgba(90, 122, 109, 0.15);
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+        }
+
+        .verse-label {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-green);
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+
+        .verse-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--dark-text);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .verse-reference {
+            font-size: 13px;
+            color: var(--medium-text);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* Section Headers */
+        .content-section {
+            margin: 45px 0;
+        }
+
+        .content-section-header {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            color: var(--primary-green);
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Questions */
+        .question {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--dark-text);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .question-number {
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        /* Writing Space */
+        .writing-space {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+            min-height: 140px;
+            margin: 15px 0 30px;
+            background-image: repeating-linear-gradient(
+                transparent,
+                transparent 31px,
+                #e8e5dc 31px,
+                #e8e5dc 32px
+            );
+            line-height: 32px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .writing-space.small {
+            min-height: 100px;
+        }
+
+        .writing-space.medium {
+            min-height: 120px;
+        }
+
+        /* Prompt Label */
+        .prompt-label {
+            font-size: 13px;
+            color: var(--primary-green);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        /* Divider */
+        .content-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent);
+            margin: 45px 0;
+        }
+
+        /* Page Number */
+        .page-number {
+            text-align: center;
+            padding: 30px 0 20px;
+            font-size: 12px;
+            color: var(--medium-text);
+            font-style: italic;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+            }
+            .interior-page {
+                padding: 40px;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cover {
+                padding: 60px 30px;
+            }
+            .cover-title {
+                font-size: 38px;
+            }
+            .cover-description {
+                font-size: 20px;
+            }
+            .interior-page {
+                padding: 40px 30px;
+            }
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            .day-title {
+                font-size: 26px;
+            }
+            .week-header {
+                margin: -40px -30px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER PAGE -->
+    <div class="page">
+        <div class="cover">
+            <div class="cover-content">
+                <div class="cover-ornament"></div>
+                <h1 class="cover-title">CARITAS<br>MANIFESTO</h1>
+                <p class="cover-subtitle">40 Day Journey</p>
+                <p class="cover-description">
+                    Learning to love God with everything—<br>
+                    heart, soul, mind, and strength
+                </p>
+                <div class="cover-journal-type">
+                    Participant's Journal & Workbook
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOW TO USE THIS JOURNAL -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="intro-section">
+                <h2 class="section-title">How to Use This Journal</h2>
+                <div class="section-divider"></div>
+                <p class="intro-text">
+                    Welcome to your 40-day journey of learning to love God with everything.<br>
+                    This journal is your companion as you read through the daily devotions in the CARITAS book.
+                </p>
+            </div>
+
+            <div class="checklist">
+                <div class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span>Process what you're learning through reflection questions</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span>Apply truth to your life with specific action steps</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span>Track your growth over 40 days</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span>Pray intentionally using guided prayer prompts</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span>Remember key verses with memory cards</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span>Prepare for group discussions by capturing your thoughts</span>
+                </div>
+            </div>
+
+            <div class="rhythm-box">
+                <h3 class="rhythm-title">Daily Rhythm: Each Day, You'll</h3>
+                <div class="rhythm-steps">
+                    <div class="rhythm-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-action">Read</div>
+                            <div class="step-description">the day's devotion in the CARITAS book (15-20 minutes)</div>
+                        </div>
+                    </div>
+                    <div class="rhythm-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-action">Reflect</div>
+                            <div class="step-description">using the journal prompts on that day's page (10-15 minutes)</div>
+                        </div>
+                    </div>
+                    <div class="rhythm-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-action">Respond</div>
+                            <div class="step-description">with a specific action step you'll take</div>
+                        </div>
+                    </div>
+                    <div class="rhythm-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-action">Remember</div>
+                            <div class="step-description">by reviewing the day's memory verse</div>
+                        </div>
+                    </div>
+                    <div class="rhythm-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <div class="step-action">Pray</div>
+                            <div class="step-description">using the guided prayer prompt</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro-section" style="margin-top: 50px;">
+                <h2 class="section-title">Tips for Success</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">📖</div>
+                    <h4 class="tip-title">Find a Consistent Time</h4>
+                    <p class="tip-text">Morning works best for most people—before the day gets busy. But whenever works for you, be consistent.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">✍️</div>
+                    <h4 class="tip-title">Be Honest</h4>
+                    <p class="tip-text">This journal is between you and God. Don't write what you think you should say—write what's actually true.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🎯</div>
+                    <h4 class="tip-title">Be Specific</h4>
+                    <p class="tip-text">Vague responses lead to vague transformation. Get specific about struggles, commitments, and applications.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🤝</div>
+                    <h4 class="tip-title">Share with Your Group</h4>
+                    <p class="tip-text">Bring this journal to group meetings. Your reflections will fuel great discussions.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📝</div>
+                    <h4 class="tip-title">Don't Skip the Hard Questions</h4>
+                    <p class="tip-text">The questions that make you uncomfortable are often the ones God wants you to answer.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🙏</div>
+                    <h4 class="tip-title">Pray Through Your Writing</h4>
+                    <p class="tip-text">Let journaling become prayer. Talk to God as you write.</p>
+                </div>
+            </div>
+
+            <div class="page-number">— 42 —</div>
+        </div>
+    </div>
+
+</body>
+</html>-number">— 1 —</div>
+        </div>
+    </div>
+
+    <!-- WHAT'S INSIDE PAGE -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="intro-section">
+                <h2 class="section-title">What's Inside</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="contents-list">
+                <div class="contents-week">
+                    <h3 class="week-title">PERSONAL INFORMATION & COMMITMENTS (pages 3-5)</h3>
+                </div>
+
+                <div class="contents-week">
+                    <h3 class="week-title">WEEK 6: INTEGRATION & CELEBRATION (Days 36-40)</h3>
+                    <div class="week-items">
+                        <div class="week-item">Daily reflection pages</div>
+                        <div class="week-item">Final summary & commitment page</div>
+                        <div class="week-item">Scripture memory cards</div>
+                    </div>
+                </div>
+
+                <div class="contents-week">
+                    <h3 class="week-title">APPENDICES</h3>
+                    <div class="week-items">
+                        <div class="week-item">40-Day Prayer Log</div>
+                        <div class="week-item">Application Tracker</div>
+                        <div class="week-item">Accountability Partner Guide</div>
+                        <div class="week-item">Resources for Continued Growth</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro-text" style="margin-top: 60px; font-size: 16px; font-style: italic; color: var(--primary-green);">
+                Now let's begin your journey.
+            </div>
+
+            <div class="page-number">— 2 —</div>
+        </div>
+    </div>
+
+    <!-- PERSONAL INFORMATION PAGE -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="intro-section">
+                <h2 class="section-title">Personal Information</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-field">
+                    <label class="field-label">Name:</label>
+                    <input type="text" class="field-input" />
+                </div>
+                <div class="form-field">
+                    <label class="field-label">Start Date:</label>
+                    <input type="text" class="field-input" />
+                </div>
+                <div class="form-field">
+                    <label class="field-label">My reason for taking this 40-day journey:</label>
+                    <textarea class="field-textarea"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="form-title">My Commitment</h3>
+                <p style="font-size: 14px; color: var(--medium-text); margin-bottom: 15px;">
+                    Over the next 40 days, I commit to:
+                </p>
+                <div class="checkbox-group">
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Reading each daily devotion</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Completing journal reflections</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Taking specific action steps</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Attending group meetings (if in a group)</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Meeting with my accountability partner weekly</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Memorizing Scripture</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Praying daily</span>
+                    </div>
+                </div>
+
+                <div class="form-field" style="margin-top: 25px;">
+                    <label class="field-label">I'm making this commitment because:</label>
+                    <textarea class="field-textarea" style="min-height: 100px;"></textarea>
+                </div>
+            </div>
+
+            <div class="page-number">— 3 —</div>
+        </div>
+    </div>
+
+    <!-- MY PRAYER PAGE -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="form-section">
+                <h3 class="form-title">My Prayer for These 40 Days</h3>
+                <p class="prompt-label" style="margin-bottom: 15px;">Father, as I begin this journey...</p>
+                <textarea class="field-textarea" style="min-height: 200px;"></textarea>
+            </div>
+
+            <div class="form-section" style="margin-top: 50px;">
+                <h3 class="form-title">Accountability Partner</h3>
+                <div class="form-field">
+                    <label class="field-label">Name:</label>
+                    <input type="text" class="field-input" />
+                </div>
+                <div class="form-field">
+                    <label class="field-label">Phone:</label>
+                    <input type="text" class="field-input" />
+                </div>
+                <div class="form-field">
+                    <label class="field-label">Email:</label>
+                    <input type="text" class="field-input" />
+                </div>
+                <div class="form-field">
+                    <label class="field-label">Meeting Day/Time:</label>
+                    <input type="text" class="field-input" />
+                </div>
+            </div>
+
+            <div class="form-section" style="margin-top: 50px;">
+                <h3 class="form-title">Group Information <span style="font-weight: 400; font-size: 14px; color: var(--medium-text);">(if applicable)</span></h3>
+                <div class="form-field">
+                    <label class="field-label">Leader:</label>
+                    <input type="text" class="field-input" />
+                </div>
+                <div class="form-field">
+                    <label class="field-label">Meeting Location:</label>
+                    <input type="text" class="field-input" />
+                </div>
+                <div class="form-field">
+                    <label class="field-label">Meeting Day/Time:</label>
+                    <input type="text" class="field-input" />
+                </div>
+                <div class="form-field">
+                    <label class="field-label">Group Members:</label>
+                    <textarea class="field-textarea" style="min-height: 130px;"></textarea>
+                </div>
+            </div>
+
+            <div class="page-number">— 4 —</div>
+        </div>
+    </div>
+
+    <!-- WEEK 1 HEADER -->
+    <div class="page">
+        <div class="interior-page" style="padding: 0;">
+            <div class="week-header">
+                <div class="week-number">WEEK 1</div>
+                <div class="week-theme">The Call</div>
+                <div class="week-days">DAYS 1-7</div>
+            </div>
+            <div style="padding: 50px 70px;">
+                <p style="text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; line-height: 1.8; color: var(--medium-text); max-width: 600px; margin: 0 auto;">
+                    Before we can love God with everything, we must first answer the most important question Jesus ever asked: "Do you love Me?"
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="day-header">
+                <div class="day-number">DAY 1</div>
+                <h2 class="day-title">It Starts with a Question</h2>
+                <div class="day-date">Date: _______________</div>
+            </div>
+
+            <div class="truth-box">
+                <div class="truth-label">Today's Truth</div>
+                <div class="truth-text">
+                    Jesus is still asking the question He asked Peter: "Do you love Me?" Your answer determines everything.
+                </div>
+            </div>
+
+            <div class="verse-box">
+                <div class="verse-label">Memory Verse</div>
+                <div class="verse-text">
+                    "Jesus said to Simon Peter, 'Simon son of John, do you love me?'"
+                </div>
+                <div class="verse-reference">— John 21:15</div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Reflect</h3>
+                
+                <div class="question">
+                    <span class="question-number">1.</span> Jesus asked Peter three times: "Do you love Me?" If Jesus asked you that question right now, how would you honestly answer?
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">2.</span> The reading said: "You can say all the right words, attend all the services, know all the theology—but if you don't actually love Jesus, it's all empty religion." Where do you see yourself in that statement?
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">3.</span> What's the difference between loving Jesus and loving what He gives you? Which one describes your faith more accurately right now?
+                </div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 5 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 1 CONTINUED -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="content-section">
+                <h3 class="content-section-header">Respond</h3>
+                
+                <div class="prompt-label">Today's Question to Consider: Do you love Jesus, or do you just love what He does for you?</div>
+                <div class="writing-space small"></div>
+
+                <div class="prompt-label">My honest answer:</div>
+                <div class="writing-space medium"></div>
+
+                <div class="prompt-label">One specific action I'll take today to love Jesus more:</div>
+                <div class="writing-space medium"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Remember</h3>
+                
+                <div class="verse-box" style="margin: 25px 0;">
+                    <div class="verse-label">Today's Memory Verse</div>
+                    <div class="verse-text">
+                        "Jesus said to Simon Peter, 'Simon son of John, do you love me?'"
+                    </div>
+                    <div class="verse-reference">— John 21:15</div>
+                </div>
+
+                <div class="prompt-label">Write it here from memory:</div>
+                <div class="writing-space small"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Pray</h3>
+                
+                <div class="prompt-label">Jesus, when You ask me "Do you love Me?"...</div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 6 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="day-header">
+                <div class="day-number">DAY 2</div>
+                <h2 class="day-title">Now That I'm Saved, Then What?</h2>
+                <div class="day-date">Date: _______________</div>
+            </div>
+
+            <div class="truth-box">
+                <div class="truth-label">Today's Truth</div>
+                <div class="truth-text">
+                    Salvation isn't the destination—it's the starting line. Now that you're saved, the real journey of transformation begins.
+                </div>
+            </div>
+
+            <div class="verse-box">
+                <div class="verse-label">Memory Verse</div>
+                <div class="verse-text">
+                    "For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do."
+                </div>
+                <div class="verse-reference">— Ephesians 2:10</div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Reflect</h3>
+                
+                <div class="question">
+                    <span class="question-number">1.</span> Before reading today's devotion, how would you have answered the question: "Now that I'm saved, then what?" Has your answer changed?
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">2.</span> The reading described "minimum viable Christianity"—just enough Jesus to secure eternity, not enough to transform today. Be brutally honest: Does this describe you?
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">3.</span> What would your life look like if you truly lived like salvation was the starting line, not the finish line?
+                </div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 7 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 2 CONTINUED -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="content-section">
+                <h3 class="content-section-header">Respond</h3>
+                
+                <div class="prompt-label">Today's Question to Consider: Are you living like salvation is the finish line or the starting line?</div>
+
+                <div class="prompt-label" style="margin-top: 20px;">One way I've been treating salvation as the finish line:</div>
+                <div class="writing-space small"></div>
+
+                <div class="prompt-label">One way I'll treat it as a starting line this week:</div>
+                <div class="writing-space medium"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Remember</h3>
+                
+                <div class="verse-box" style="margin: 25px 0;">
+                    <div class="verse-label">Today's Memory Verse</div>
+                    <div class="verse-text">
+                        "For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do."
+                    </div>
+                    <div class="verse-reference">— Ephesians 2:10</div>
+                </div>
+
+                <div class="prompt-label">What does it mean to you that God prepared good works "in advance" for you?</div>
+                <div class="writing-space small"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Pray</h3>
+                
+                <div class="prompt-label">Father, thank You for saving me. Now show me...</div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 8 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="day-header">
+                <div class="day-number">DAY 3</div>
+                <h2 class="day-title">The Treasure Worth Everything</h2>
+                <div class="day-date">Date: _______________</div>
+            </div>
+
+            <div class="truth-box">
+                <div class="truth-label">Today's Truth</div>
+                <div class="truth-text">
+                    When you've seen the treasure's worth, everything else becomes worthless by comparison. The trade isn't sacrifice—it's wisdom.
+                </div>
+            </div>
+
+            <div class="verse-box">
+                <div class="verse-label">Memory Verse</div>
+                <div class="verse-text">
+                    "The kingdom of heaven is like treasure hidden in a field. When a man found it, he hid it again, and then in his joy went and sold all he had and bought that field."
+                </div>
+                <div class="verse-reference">— Matthew 13:44</div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Reflect</h3>
+                
+                <div class="question">
+                    <span class="question-number">1.</span> Jesus said the man sold everything "in his joy." Why do you think he experienced joy in giving up everything? What does that reveal about the treasure?
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">2.</span> What are you currently treasuring more than God? (Be specific: career, relationship, comfort, control, approval, money, etc.)
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">3.</span> If you truly believed God is the treasure worth everything, what would you do differently starting tomorrow?
+                </div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 9 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 3 CONTINUED -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="content-section">
+                <h3 class="content-section-header">Respond</h3>
+                
+                <div class="prompt-label">Today's Question to Consider: What can't you imagine living without? That might be your treasure.</div>
+                
+                <div class="prompt-label" style="margin-top: 20px;">My honest answer:</div>
+                <div class="writing-space small"></div>
+
+                <div class="prompt-label">One step toward making God my treasure instead:</div>
+                <div class="writing-space medium"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Remember</h3>
+                
+                <div class="verse-box" style="margin: 25px 0;">
+                    <div class="verse-label">Today's Memory Verse</div>
+                    <div class="verse-text">
+                        "The kingdom of heaven is like treasure hidden in a field. When a man found it, he hid it again, and then in his joy went and sold all he had and bought that field."
+                    </div>
+                    <div class="verse-reference">— Matthew 13:44</div>
+                </div>
+
+                <div class="prompt-label">Why is "in his joy" such an important phrase in this verse?</div>
+                <div class="writing-space small"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Pray</h3>
+                
+                <div class="prompt-label">God, I confess I've treasured other things more than You. Specifically...</div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 10 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="day-header">
+                <div class="day-number">DAY 4</div>
+                <h2 class="day-title">The Life You Were Made For</h2>
+                <div class="day-date">Date: _______________</div>
+            </div>
+
+            <div class="truth-box">
+                <div class="truth-label">Today's Truth</div>
+                <div class="truth-text">
+                    Abundant life isn't found in comfort, success, or getting everything you want—it's found in giving God everything He deserves.
+                </div>
+            </div>
+
+            <div class="verse-box">
+                <div class="verse-label">Memory Verse</div>
+                <div class="verse-text">
+                    "I have come that they may have life, and have it to the full."
+                </div>
+                <div class="verse-reference">— John 10:10</div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Reflect</h3>
+                
+                <div class="question">
+                    <span class="question-number">1.</span> The reading said most Christians are "surviving until heaven" rather than experiencing abundant life now. Which describes you?
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">2.</span> What does "abundant life" mean to you? What would it actually look like in your daily experience?
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">3.</span> The devotion said: "Fullness comes from connection to the Source, not from accumulating stuff." Where are you trying to find fullness in accumulation instead of connection?
+                </div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 11 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 4 CONTINUED -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="content-section">
+                <h3 class="content-section-header">Respond</h3>
+                
+                <div class="prompt-label">Today's Question to Consider: Does your Christian life feel full, or does it feel like survival until heaven?</div>
+                
+                <div class="prompt-label" style="margin-top: 20px;">My honest assessment:</div>
+                <div class="writing-space small"></div>
+
+                <div class="prompt-label">One way I'll pursue fullness through connection this week:</div>
+                <div class="writing-space medium"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Remember</h3>
+                
+                <div class="verse-box" style="margin: 25px 0;">
+                    <div class="verse-label">Today's Memory Verse</div>
+                    <div class="verse-text">
+                        "I have come that they may have life, and have it to the full."
+                    </div>
+                    <div class="verse-reference">— John 10:10</div>
+                </div>
+
+                <div class="prompt-label">What's the difference between "life" and "life to the full"?</div>
+                <div class="writing-space small"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Pray</h3>
+                
+                <div class="prompt-label">Jesus, You promised abundant life. Right now, I don't feel...</div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 12 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="day-header">
+                <div class="day-number">DAY 5</div>
+                <h2 class="day-title">Exclusive Devotion</h2>
+                <div class="day-date">Date: _______________</div>
+            </div>
+
+            <div class="truth-box">
+                <div class="truth-label">Today's Truth</div>
+                <div class="truth-text">
+                    God doesn't just want first place in your life—He demands it, because only He deserves it and only He can satisfy.
+                </div>
+            </div>
+
+            <div class="verse-box">
+                <div class="verse-label">Memory Verse</div>
+                <div class="verse-text">
+                    "You shall have no other gods before Me."
+                </div>
+                <div class="verse-reference">— Exodus 20:3</div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Reflect</h3>
+                
+                <div class="question">
+                    <span class="question-number">1.</span> Does God's demand for exclusive devotion feel restrictive or freeing to you? Why?
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">2.</span> Using the test from today's reading: If God asked you to give up __________, would you? (Fill in the blank honestly. If you hesitate, that's probably an idol.)
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">3.</span> The reading said: "When God is your only ultimate allegiance, everything else can be held loosely." What would change in your life if you actually held everything loosely except God?
+                </div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 13 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 5 CONTINUED -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="content-section">
+                <h3 class="content-section-header">Respond</h3>
+                
+                <div class="prompt-label">Today's Question to Consider: What are you tempted to give the devotion that belongs to God alone?</div>
+                
+                <div class="prompt-label" style="margin-top: 20px;">My honest answer:</div>
+                <div class="writing-space small"></div>
+
+                <div class="prompt-label">One way I'll give God exclusive devotion this week:</div>
+                <div class="writing-space medium"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Remember</h3>
+                
+                <div class="verse-box" style="margin: 25px 0;">
+                    <div class="verse-label">Today's Memory Verse</div>
+                    <div class="verse-text">
+                        "You shall have no other gods before Me."
+                    </div>
+                    <div class="verse-reference">— Exodus 20:3</div>
+                </div>
+
+                <div class="prompt-label">Why does God deserve exclusive devotion?</div>
+                <div class="writing-space small"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Pray</h3>
+                
+                <div class="prompt-label">Father, I've given devotion to things that don't deserve it. Specifically...</div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 14 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="day-header">
+                <div class="day-number">DAY 6</div>
+                <h2 class="day-title">First Love Lost</h2>
+                <div class="day-date">Date: _______________</div>
+            </div>
+
+            <div class="truth-box">
+                <div class="truth-label">Today's Truth</div>
+                <div class="truth-text">
+                    You can have sound doctrine, faithful service, and moral integrity—and still lose your first love for God.
+                </div>
+            </div>
+
+            <div class="verse-box">
+                <div class="verse-label">Memory Verse</div>
+                <div class="verse-text">
+                    "Yet I hold this against you: You have forsaken the love you had at first."
+                </div>
+                <div class="verse-reference">— Revelation 2:4</div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Reflect</h3>
+                
+                <div class="question">
+                    <span class="question-number">1.</span> Think back to when your faith felt most alive (when you first believed, or a season of closeness to God). What was that like? Describe it.
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">2.</span> Compare then to now. What's changed? Be specific about what's different in your relationship with God.
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">3.</span> Jesus said to "do the things you did at first" (Revelation 2:5). What did you do in that season of first love that you've stopped doing now?
+                </div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 15 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 6 CONTINUED -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="content-section">
+                <h3 class="content-section-header">Respond</h3>
+                
+                <div class="prompt-label">Today's Question to Consider: When you first came to faith, what captivated you about Jesus? How does your relationship with Him feel now?</div>
+                
+                <div class="prompt-label" style="margin-top: 20px;">Then:</div>
+                <div class="writing-space small"></div>
+
+                <div class="prompt-label">Now:</div>
+                <div class="writing-space small"></div>
+
+                <div class="prompt-label">One "first love" practice I'll return to this week:</div>
+                <div class="writing-space small"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Remember</h3>
+                
+                <div class="verse-box" style="margin: 25px 0;">
+                    <div class="verse-label">Today's Memory Verse</div>
+                    <div class="verse-text">
+                        "Yet I hold this against you: You have forsaken the love you had at first."
+                    </div>
+                    <div class="verse-reference">— Revelation 2:4</div>
+                </div>
+
+                <div class="prompt-label">What's the difference between doing religious things and loving Jesus?</div>
+                <div class="writing-space small"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Pray</h3>
+                
+                <div class="prompt-label">Jesus, I confess I've lost my first love. Rekindle the fire...</div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 16 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="day-header">
+                <div class="day-number">DAY 7</div>
+                <h2 class="day-title">The Invitation to Taste</h2>
+                <div class="day-date">Date: _______________</div>
+            </div>
+
+            <div class="truth-box">
+                <div class="truth-label">Today's Truth</div>
+                <div class="truth-text">
+                    You can't testify to what you haven't tasted—firsthand encounter is the foundation of authentic faith.
+                </div>
+            </div>
+
+            <div class="verse-box">
+                <div class="verse-label">Memory Verse</div>
+                <div class="verse-text">
+                    "Taste and see that the Lord is good; blessed is the one who takes refuge in him."
+                </div>
+                <div class="verse-reference">— Psalm 34:8</div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Reflect</h3>
+                
+                <div class="question">
+                    <span class="question-number">1.</span> The reading asked: Are you living on secondhand reports about God, or have you tasted His goodness for yourself? Which describes you?
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">2.</span> When (if ever) have you tasted God's goodness firsthand—not just heard about it, but personally experienced it? Describe that moment.
+                </div>
+                <div class="writing-space"></div>
+
+                <div class="question">
+                    <span class="question-number">3.</span> What would it look like for you to "taste and see" this week—to position yourself for firsthand encounter with God?
+                </div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 17 —</div>
+        </div>
+    </div>
+
+    <!-- DAY 7 CONTINUED -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="content-section">
+                <h3 class="content-section-header">Respond</h3>
+                
+                <div class="prompt-label">Today's Question to Consider: Are you living on secondhand reports about God, or have you tasted His goodness for yourself?</div>
+                
+                <div class="prompt-label" style="margin-top: 20px;">My honest answer:</div>
+                <div class="writing-space small"></div>
+
+                <div class="prompt-label">One way I'll "taste and see" this week (create space to encounter God):</div>
+                <div class="writing-space medium"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Remember</h3>
+                
+                <div class="verse-box" style="margin: 25px 0;">
+                    <div class="verse-label">Today's Memory Verse</div>
+                    <div class="verse-text">
+                        "Taste and see that the Lord is good; blessed is the one who takes refuge in him."
+                    </div>
+                    <div class="verse-reference">— Psalm 34:8</div>
+                </div>
+
+                <div class="prompt-label">What's the difference between "hearing about" and "tasting"?</div>
+                <div class="writing-space small"></div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="content-section">
+                <h3 class="content-section-header">Pray</h3>
+                
+                <div class="prompt-label">Father, I want to taste Your goodness for myself, not just hear about it. Show me...</div>
+                <div class="writing-space"></div>
+            </div>
+
+            <div class="page-number">— 18 —</div>
+        </div>
+    </div>
+
+    <!-- WEEK 1 SUMMARY -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="intro-section">
+                <h2 class="section-title">Week 1 Summary</h2>
+                <div class="section-divider"></div>
+                <p style="text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--medium-text); margin-bottom: 40px;">
+                    Days 1-7: The Call
+                </p>
+            </div>
+
+            <div class="form-section">
+                <h3 class="form-title">Looking Back</h3>
+                
+                <div class="form-field">
+                    <label class="field-label">1. What was the most impactful truth from this week?</label>
+                    <textarea class="field-textarea" style="min-height: 80px;"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label class="field-label">2. Which day's reading challenged you most? Why?</label>
+                    <textarea class="field-textarea" style="min-height: 80px;"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label class="field-label">3. Where did you sense God speaking to you most clearly this week?</label>
+                    <textarea class="field-textarea" style="min-height: 90px;"></textarea>
+                </div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="form-section">
+                <h3 class="form-title">Integration</h3>
+                
+                <div class="form-field">
+                    <label class="field-label">4. Looking at all seven days together, what's the common thread or theme you see?</label>
+                    <textarea class="field-textarea" style="min-height: 80px;"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label class="field-label">5. How has your understanding of loving God changed over these seven days?</label>
+                    <textarea class="field-textarea" style="min-height: 90px;"></textarea>
+                </div>
+            </div>
+
+            <div class="page-number">— 19 —</div>
+        </div>
+    </div>
+
+    <!-- WEEK 1 SUMMARY PAGE 2 -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="form-section">
+                <h3 class="form-title">Application</h3>
+                
+                <div class="form-field">
+                    <label class="field-label">6. What specific actions did you take this week? (Review your daily "Respond" sections.)</label>
+                    <div class="checkbox-group" style="padding: 20px;">
+                        <div class="checkbox-field" style="margin-bottom: 18px;">
+                            <div class="checkbox-box">☐</div>
+                            <div style="flex: 1;">
+                                <span style="font-weight: 600; color: var(--primary-green); font-size: 13px;">Day 1:</span>
+                                <input type="text" class="field-input" style="margin-top: 5px;" />
+                            </div>
+                        </div>
+                        <div class="checkbox-field" style="margin-bottom: 18px;">
+                            <div class="checkbox-box">☐</div>
+                            <div style="flex: 1;">
+                                <span style="font-weight: 600; color: var(--primary-green); font-size: 13px;">Day 2:</span>
+                                <input type="text" class="field-input" style="margin-top: 5px;" />
+                            </div>
+                        </div>
+                        <div class="checkbox-field" style="margin-bottom: 18px;">
+                            <div class="checkbox-box">☐</div>
+                            <div style="flex: 1;">
+                                <span style="font-weight: 600; color: var(--primary-green); font-size: 13px;">Day 3:</span>
+                                <input type="text" class="field-input" style="margin-top: 5px;" />
+                            </div>
+                        </div>
+                        <div class="checkbox-field" style="margin-bottom: 18px;">
+                            <div class="checkbox-box">☐</div>
+                            <div style="flex: 1;">
+                                <span style="font-weight: 600; color: var(--primary-green); font-size: 13px;">Day 4:</span>
+                                <input type="text" class="field-input" style="margin-top: 5px;" />
+                            </div>
+                        </div>
+                        <div class="checkbox-field" style="margin-bottom: 18px;">
+                            <div class="checkbox-box">☐</div>
+                            <div style="flex: 1;">
+                                <span style="font-weight: 600; color: var(--primary-green); font-size: 13px;">Day 5:</span>
+                                <input type="text" class="field-input" style="margin-top: 5px;" />
+                            </div>
+                        </div>
+                        <div class="checkbox-field" style="margin-bottom: 18px;">
+                            <div class="checkbox-box">☐</div>
+                            <div style="flex: 1;">
+                                <span style="font-weight: 600; color: var(--primary-green); font-size: 13px;">Day 6:</span>
+                                <input type="text" class="field-input" style="margin-top: 5px;" />
+                            </div>
+                        </div>
+                        <div class="checkbox-field">
+                            <div class="checkbox-box">☐</div>
+                            <div style="flex: 1;">
+                                <span style="font-weight: 600; color: var(--primary-green); font-size: 13px;">Day 7:</span>
+                                <input type="text" class="field-input" style="margin-top: 5px;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label class="field-label">7. Which actions were hardest? Which were most rewarding?</label>
+                    <textarea class="field-textarea" style="min-height: 90px;"></textarea>
+                </div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="form-section">
+                <h3 class="form-title">Moving Forward</h3>
+                
+                <div class="form-field">
+                    <label class="field-label">8. Based on this week, what's ONE commitment you're making going into Week 2?</label>
+                    <textarea class="field-textarea" style="min-height: 80px;"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label class="field-label">9. What obstacles might prevent you from keeping that commitment?</label>
+                    <textarea class="field-textarea" style="min-height: 70px;"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label class="field-label">10. How will you overcome those obstacles?</label>
+                    <textarea class="field-textarea" style="min-height: 80px;"></textarea>
+                </div>
+            </div>
+
+            <div class="page-number">— 20 —</div>
+        </div>
+    </div>
+
+    <!-- WEEK 1 SUMMARY PAGE 3 -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="form-section">
+                <h3 class="form-title">Memory Verses</h3>
+                <p style="font-size: 14px; color: var(--medium-text); margin-bottom: 20px;">
+                    Review this week's verses. Which one impacted you most?
+                </p>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Day 1: John 21:15 — "Do you love me?"</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Day 2: Ephesians 2:10 — "Created for good works"</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Day 3: Matthew 13:44 — "Treasure worth everything"</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Day 4: John 10:10 — "Life to the full"</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Day 5: Exodus 20:3 — "No other gods"</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Day 6: Revelation 2:4 — "First love lost"</span>
+                    </div>
+                    <div class="checkbox-field">
+                        <div class="checkbox-box">☐</div>
+                        <span class="checkbox-label">Day 7: Psalm 34:8 — "Taste and see"</span>
+                    </div>
+                </div>
+
+                <div class="form-field" style="margin-top: 25px;">
+                    <label class="field-label">Write your favorite verse from memory:</label>
+                    <textarea class="field-textarea" style="min-height: 90px;"></textarea>
+                </div>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="form-section">
+                <h3 class="form-title">Prayer</h3>
+                <div class="prompt-label" style="margin-bottom: 15px;">Father, as I finish Week 1...</div>
+                <textarea class="field-textarea" style="min-height: 150px;"></textarea>
+            </div>
+
+            <div class="content-divider"></div>
+
+            <div class="form-section">
+                <h3 class="form-title">Group Discussion Prep <span style="font-weight: 400; font-size: 14px; color: var(--medium-text);">(if applicable)</span></h3>
+                <div class="form-field">
+                    <label class="field-label">What will you share with your group from this week?</label>
+                    <textarea class="field-textarea" style="min-height: 130px;"></textarea>
+                </div>
+            </div>
+
+            <div class="page-number">— 21 —</div>
+        </div>
+    </div>
+
+    <!-- MEMORY VERSE CARDS - WEEK 1 -->
+    <div class="page">
+        <div class="interior-page">
+            <div class="intro-section">
+                <h2 class="section-title">Memory Verse Cards</h2>
+                <div class="section-divider"></div>
+                <p style="text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--medium-text); margin-bottom: 40px;">
+                    Week 1 - The Call
+                </p>
+            </div>
+
+            <!-- Card Day 1 -->
+            <div style="border: 2px dashed var(--border); padding: 30px; margin-bottom: 30px; background: white; border-radius: 4px;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                    <span style="font-size: 20px;">📖</span>
+                    <span style="font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 2px; color: var(--primary-green); font-weight: 600;">WEEK 1 - DAY 1</span>
+                </div>
+                <div style="padding: 20px; background: var(--light-bg); border-radius: 4px; margin-bottom: 15px;">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; line-height: 1.8; color: var(--dark-text); margin-bottom: 10px;">
+                        "Jesus said to Simon Peter, 'Simon son of John, do you love me?'"
+                    </div>
+                    <div style="font-size: 13px; color: var(--medium-text); font-weight: 600;">— John 21:15</div>
+                </div>
+                <div style="padding: 15px; border-left: 3px solid var(--accent-gold); background: #fdfcf9;">
+                    <div style="font-size: 12px; font-weight: 600; color: var(--primary-green); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Reflection:</div>
+                    <div style="font-size: 13px; color: var(--medium-text); line-height: 1.6;">Do you love Jesus, or do you just love what He does for you?</div>
+                </div>
+            </div>
+
+            <!-- Card Day 2 -->
+            <div style="border: 2px dashed var(--border); padding: 30px; margin-bottom: 30px; background: white; border-radius: 4px;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                    <span style="font-size: 20px;">📖</span>
+                    <span style="font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 2px; color: var(--primary-green); font-weight: 600;">WEEK 1 - DAY 2</span>
+                </div>
+                <div style="padding: 20px; background: var(--light-bg); border-radius: 4px; margin-bottom: 15px;">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; line-height: 1.8; color: var(--dark-text); margin-bottom: 10px;">
+                        "For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do."
+                    </div>
+                    <div style="font-size: 13px; color: var(--medium-text); font-weight: 600;">— Ephesians 2:10</div>
+                </div>
+                <div style="padding: 15px; border-left: 3px solid var(--accent-gold); background: #fdfcf9;">
+                    <div style="font-size: 12px; font-weight: 600; color: var(--primary-green); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Reflection:</div>
+                    <div style="font-size: 13px; color: var(--medium-text); line-height: 1.6;">Salvation is the starting line, not the finish line.</div>
+                </div>
+            </div>
+
+            <!-- Card Day 3 -->
+            <div style="border: 2px dashed var(--border); padding: 30px; background: white; border-radius: 4px;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                    <span style="font-size: 20px;">📖</span>
+                    <span style="font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 2px; color: var(--primary-green); font-weight: 600;">WEEK 1 - DAY 3</span>
+                </div>
+                <div style="padding: 20px; background: var(--light-bg); border-radius: 4px; margin-bottom: 15px;">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; line-height: 1.8; color: var(--dark-text); margin-bottom: 10px;">
+                        "The kingdom of heaven is like treasure hidden in a field. When a man found it, he hid it again, and then in his joy went and sold all he had and bought that field."
+                    </div>
+                    <div style="font-size: 13px; color: var(--medium-text); font-weight: 600;">— Matthew 13:44</div>
+                </div>
+                <div style="padding: 15px; border-left: 3px solid var(--accent-gold); background: #fdfcf9;">
+                    <div style="font-size: 12px; font-weight: 600; color: var(--primary-green); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Reflection:</div>
+                    <div style="font-size: 13px; color: var(--medium-text); line-height: 1.6;">When you've seen the treasure, everything else becomes worthless by comparison.</div>
+                </div>
+            </div>
+
+            <div class="page-number">— 22 —</div>
+        </div>
+    </div>
+
+    <!-- MEMORY VERSE CARDS PAGE 2 -->
+    <div class="page">
+        <div class="interior-page">
+            <!-- Card Day 4 -->
+            <div style="border: 2px dashed var(--border); padding: 30px; margin-bottom: 30px; background: white; border-radius: 4px;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                    <span style="font-size: 20px;">📖</span>
+                    <span style="font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 2px; color: var(--primary-green); font-weight: 600;">WEEK 1 - DAY 4</span>
+                </div>
+                <div style="padding: 20px; background: var(--light-bg); border-radius: 4px; margin-bottom: 15px;">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; line-height: 1.8; color: var(--dark-text); margin-bottom: 10px;">
+                        "I have come that they may have life, and have it to the full."
+                    </div>
+                    <div style="font-size: 13px; color: var(--medium-text); font-weight: 600;">— John 10:10</div>
+                </div>
+                <div style="padding: 15px; border-left: 3px solid var(--accent-gold); background: #fdfcf9;">
+                    <div style="font-size: 12px; font-weight: 600; color: var(--primary-green); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Reflection:</div>
+                    <div style="font-size: 13px; color: var(--medium-text); line-height: 1.6;">Abundant life comes from connection to the Source, not accumulation of stuff.</div>
+                </div>
+            </div>
+
+            <!-- Card Day 5 -->
+            <div style="border: 2px dashed var(--border); padding: 30px; margin-bottom: 30px; background: white; border-radius: 4px;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                    <span style="font-size: 20px;">📖</span>
+                    <span style="font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 2px; color: var(--primary-green); font-weight: 600;">WEEK 1 - DAY 5</span>
+                </div>
+                <div style="padding: 20px; background: var(--light-bg); border-radius: 4px; margin-bottom: 15px;">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; line-height: 1.8; color: var(--dark-text); margin-bottom: 10px;">
+                        "You shall have no other gods before Me."
+                    </div>
+                    <div style="font-size: 13px; color: var(--medium-text); font-weight: 600;">— Exodus 20:3</div>
+                </div>
+                <div style="padding: 15px; border-left: 3px solid var(--accent-gold); background: #fdfcf9;">
+                    <div style="font-size: 12px; font-weight: 600; color: var(--primary-green); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Reflection:</div>
+                    <div style="font-size: 13px; color: var(--medium-text); line-height: 1.6;">God demands exclusive devotion—not because He's needy, but because He's worthy.</div>
+                </div>
+            </div>
+
+            <!-- Card Day 6 -->
+            <div style="border: 2px dashed var(--border); padding: 30px; margin-bottom: 30px; background: white; border-radius: 4px;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                    <span style="font-size: 20px;">📖</span>
+                    <span style="font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 2px; color: var(--primary-green); font-weight: 600;">WEEK 1 - DAY 6</span>
+                </div>
+                <div style="padding: 20px; background: var(--light-bg); border-radius: 4px; margin-bottom: 15px;">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; line-height: 1.8; color: var(--dark-text); margin-bottom: 10px;">
+                        "Yet I hold this against you: You have forsaken the love you had at first."
+                    </div>
+                    <div style="font-size: 13px; color: var(--medium-text); font-weight: 600;">— Revelation 2:4</div>
+                </div>
+                <div style="padding: 15px; border-left: 3px solid var(--accent-gold); background: #fdfcf9;">
+                    <div style="font-size: 12px; font-weight: 600; color: var(--primary-green); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Reflection:</div>
+                    <div style="font-size: 13px; color: var(--medium-text); line-height: 1.6;">You can have right behavior and still lose your heart for God.</div>
+                </div>
+            </div>
+
+            <!-- Card Day 7 -->
+            <div style="border: 2px dashed var(--border); padding: 30px; background: white; border-radius: 4px;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                    <span style="font-size: 20px;">📖</span>
+                    <span style="font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 2px; color: var(--primary-green); font-weight: 600;">WEEK 1 - DAY 7</span>
+                </div>
+                <div style="padding: 20px; background: var(--light-bg); border-radius: 4px; margin-bottom: 15px;">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; line-height: 1.8; color: var(--dark-text); margin-bottom: 10px;">
+                        "Taste and see that the Lord is good; blessed is the one who takes refuge in him."
+                    </div>
+                    <div style="font-size: 13px; color: var(--medium-text); font-weight: 600;">— Psalm 34:8</div>
+                </div>
+                <div style="padding: 15px; border-left: 3px solid var(--accent-gold); background: #fdfcf9;">
+                    <div style="font-size: 12px; font-weight: 600; color: var(--primary-green); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Reflection:</div>
+                    <div style="font-size: 13px; color: var(--medium-text); line-height: 1.6;">You can't testify to what you haven't tasted—encounter God firsthand.</div>
+                </div>
+            </div>
+
+            <div class="page-number">— 23 —</div>
+        </div>
+    </div>

@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CARITAS MANIFESTO - 40 Day Journey (Stitched)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600;700&family=Crimson+Text:wght@400;600;700&family=Lora:wght@400;500&family=EB+Garamond:ital@1&family=Merriweather:wght@300&family=Open+Sans:wght@400;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f5f5f5;
+      padding: 20px;
+      font-family: 'Lora', serif;
+      color: #2B2B2B;
+    }
+
+    .page {
+      width: 6in;
+      min-height: 9in;
+      margin: 0 auto 40px;
+      background: #FAF7F2;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      padding: 0.75in;
+      position: relative;
+      page-break-after: always;
+    }
+
+    /* Cover Page */
+    .cover-page {
+      background: linear-gradient(135deg, #E8F0E8 0%, #D4E4D4 100%);
+      padding: 0;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center; position: relative; height: 9in;
+    }
+    .cover-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 48pt; color: #2C5530;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    .cover-subtitle {
+      font-family: 'Crimson Text', serif;
+      font-size: 18pt; color: #5A5A5A; margin-bottom: 20px; font-style: italic;
+    }
+    .cover-tagline {
+      font-family: 'Crimson Text', serif;
+      font-size: 14pt; color: #5A5A5A; margin-bottom: 40px;
+    }
+    .cover-author {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16pt; color: #2C5530; position: absolute; bottom: 1.5in;
+    }
+
+    /* Headers / content */
+    .page-header {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28pt; color: #2C5530; text-align: center;
+      margin-bottom: 25px; padding-bottom: 15px; border-bottom: 2px solid #C9A961;
+    }
+    .content-text {
+      font-family: 'Lora', serif; font-size: 11pt; color: #2B2B2B;
+      line-height: 1.7; margin-bottom: 15px; text-align: justify;
+    }
+    .content-text strong { color: #2C5530; font-weight: 600; }
+
+    .highlight-box {
+      background: #E8F0E8; border-left: 4px solid #C9A961;
+      padding: 15px; margin: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .highlight-text {
+      font-family: 'Crimson Text', serif; font-size: 13pt;
+      color: #2C5530; font-weight: 600; text-align: center; line-height: 1.5;
+    }
+
+    /* Day Pages */
+    .day-header {
+      background: #2C5530;
+      margin: -0.75in -0.75in 25px -0.75in;
+      padding: 25px 0.75in; text-align: center;
+    }
+    .day-number {
+      font-family: 'Open Sans', sans-serif; font-size: 10pt; color: #C9A961;
+      letter-spacing: 2px; margin-bottom: 5px;
+    }
+    .day-title {
+      font-family: 'Cormorant Garamond', serif; font-size: 24pt; color: #FAF7F2; margin: 0;
+    }
+
+    .scripture-box {
+      background: #E8F0E8; padding: 15px; margin: 20px 0; border-radius: 5px;
+    }
+    .section-label {
+      font-family: 'Open Sans', sans-serif; font-size: 10pt; color: #2C5530;
+      font-weight: 600; margin-bottom: 8px; letter-spacing: 1px;
+    }
+    .scripture-text {
+      font-family: 'EB Garamond', serif; font-size: 13pt; font-style: italic; color: #5A5A5A; line-height: 1.5;
+    }
+    .truth-box {
+      text-align: center; padding: 20px; margin: 20px 0; border: 1px solid #C9A961;
+      background: linear-gradient(135deg, #FAF7F2 0%, #FFF9F0 100%);
+    }
+    .truth-text {
+      font-family: 'Crimson Text', serif; font-size: 12pt; color: #2C5530; font-style: italic; line-height: 1.6;
+    }
+    .verse-remember { background: #FAF7F2; border: 1px solid #D4E4D4; padding: 15px; margin: 20px 0; position: relative; }
+    .question-box { background: radial-gradient(circle at center, #E8F0E8 60%, transparent 100%); padding: 20px; margin: 20px 0; text-align: center; }
+    .question-text { font-family: 'Open Sans', sans-serif; font-size: 12pt; color: #2C5530; font-style: italic; line-height: 1.5; }
+
+    .decorative-divider { text-align: center; margin: 25px 0; color: #D4E4D4; letter-spacing: 5px; font-size: 14pt; }
+    .reading-label {
+      text-align: center; font-family: 'Open Sans', sans-serif; font-size: 10pt;
+      letter-spacing: 2px; color: #5A5A5A; margin-bottom: 20px; font-weight: 600;
+    }
+    .main-content { font-family: 'Lora', serif; font-size: 11pt; color: #2B2B2B; line-height: 1.8; text-align: justify; }
+    .main-content p { margin-bottom: 12px; }
+    .main-content h3 { font-family: 'Crimson Text', serif; font-size: 14pt; color: #2C5530; margin: 20px 0 10px; font-weight: 600; }
+    .main-content strong { color: #2C5530; font-weight: 600; }
+    .main-content em { color: #5A5A5A; }
+    .main-content ul { margin-left: 25px; margin-bottom: 15px; }
+    .main-content li { margin-bottom: 8px; line-height: 1.6; }
+
+    .prayer-box { background: linear-gradient(to bottom, #E8F0E8, transparent); padding: 20px; margin-top: 25px; border-radius: 5px; }
+    .prayer-label { font-family: 'Open Sans', sans-serif; font-size: 10pt; color: #2C5530; font-weight: 600; margin-bottom: 10px; letter-spacing: 1px; }
+    .prayer-text { font-family: 'Merriweather', serif; font-size: 11pt; font-style: italic; font-weight: 300; color: #5A5A5A; line-height: 1.6; }
+
+    .page-number {
+      position: absolute; bottom: 0.5in; right: 0.75in;
+      font-family: 'Open Sans', sans-serif; font-size: 10pt; color: #5A5A5A;
+    }
+
+    /* "How to Use" section */
+    .numbered-section { margin: 20px 0; }
+    .section-number {
+      font-family: 'Crimson Text', serif; font-size: 16pt; color: #C9A961; font-weight: bold; margin-bottom: 5px;
+    }
+    .section-title {
+      font-family: 'Crimson Text', serif; font-size: 13pt; color: #2C5530; font-weight: 600; margin-bottom: 10px;
+    }
+    ul { margin-left: 20px; margin-bottom: 15px; }
+    li { margin-bottom: 8px; line-height: 1.6; }
+
+    /* Section Divider (scoped so it doesn't clash with .section-title above) */
+    .section-divider {
+      background: linear-gradient(135deg, #E8F0E8 0%, #D4E4D4 100%);
+      padding: 2in 0.75in; text-align: center; display: flex;
+      flex-direction: column; justify-content: center; align-items: center; height: 9in;
+    }
+    .section-divider .sd-title {
+      font-family: 'Playfair Display', serif; font-size: 36pt; color: #2C5530; margin-bottom: 20px;
+    }
+    .section-divider .sd-subtitle {
+      font-family: 'Crimson Text', serif; font-size: 16pt; color: #5A5A5A; font-style: italic;
+    }
+    .section-divider .sd-days {
+      font-family: 'Open Sans', sans-serif; font-size: 12pt; color: #C9A961; letter-spacing: 2px; margin-top: 30px;
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; margin: 0; page-break-after: always; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Page -->
+  <div class="page cover-page">
+    <h1 class="cover-title">CARITAS<br>MANIFESTO</h1>
+    <h2 class="cover-subtitle">40 DAY JOURNEY</h2>
+    <p class="cover-tagline"><em>The Answer to "Now That I'm Saved, Then What?"</em></p>
+    <p class="cover-author">OLADELE ADELEYE</p>
+  </div>
+
+  <!-- Welcome Page 1 -->
+  <div class="page">
+    <h1 class="page-header">WELCOME</h1>
+
+    <p class="content-text">Dear Friend,</p>
+
+    <p class="content-text">
+      If you're holding this book, chances are you're asking a question—maybe one you've been asking for a while now:
+    </p>
+
+    <div class="highlight-box">
+      <p class="highlight-text">"Now that I'm saved, then what?"</p>
+    </div>
+
+    <p class="content-text">It's a good question. An honest question. And it's the question this book exists to answer.</p>
+    <p class="content-text">Maybe you're a new believer, fresh from that moment of salvation, wondering what the Christian life is supposed to look like going forward.</p>
+    <p class="content-text">Maybe you've been a Christian for years but feel stuck—going through the motions, checking the boxes, wondering if there's more to this than what you're currently experiencing.</p>
+    <p class="content-text">Maybe you're exhausted from trying to be a "good Christian"—serving, performing, keeping up appearances—but feeling empty inside.</p>
+
+    <div class="highlight-box">
+      <p class="highlight-text">Wherever you are, this book is for you.</p>
+    </div>
+
+    <p class="content-text">
+      Because here's the truth: Salvation isn't the end of the story. <strong>It's the beginning.</strong>
+    </p>
+    <p class="content-text">
+      God didn't save you just to forgive you. He saved you to transform you, to fill you, to give you a life so abundant that it overflows into everything you touch.
+    </p>
+    <p class="content-text">Jesus said it plainly: <em>"I have come that they may have life, and have it to the full"</em> (John 10:10).</p>
+
+    <div class="highlight-box">
+      <p class="highlight-text">Full life. Abundant life. Overflowing life.<br> Not someday in heaven. Starting now.</p>
+    </div>
+
+    <span class="page-number">i</span>
+  </div>
+
+  <!-- Welcome Page 2 -->
+  <div class="page">
+    <p class="content-text">
+      But here's what most of us miss: Abundant life doesn't come from trying harder, doing more, or performing better. It comes from one thing—<strong>loving God with everything you've got.</strong>
+    </p>
+    <p class="content-text">When Jesus was asked to identify the most important commandment, He didn't hesitate:</p>
+
+    <div class="scripture-box">
+      <p class="scripture-text">
+        "Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength." — Mark 12:30
+      </p>
+    </div>
+
+    <p class="content-text">Notice He didn't say "some of your heart" or "most of your strength." He said <strong>all.</strong></p>
+    <p class="content-text">
+      God isn't interested in being one priority among many. He's not content with Sundays while the rest of your week belongs to other loves. <strong>He wants everything.</strong>
+    </p>
+    <p class="content-text">And when you give Him everything, <strong>you get everything in return—Him.</strong></p>
+    <p class="content-text">
+      That's what this 40-day journey is about: discovering what it means to love God with everything you've got, and experiencing the abundant life that flows from that love.
+    </p>
+    <p class="content-text">Not through guilt. Not through performance. But through encounter, transformation, and walking in step with the Holy Spirit.</p>
+
+    <div class="highlight-box">
+      <p class="highlight-text">This isn't another self-help book. This is an invitation into the life you were made for.</p>
+    </div>
+
+    <p class="content-text">
+      Over the next 40 days, we're going to walk together. I'll be honest with you about my struggles and questions. I'll share what I've learned—not because I've arrived, but because I'm on the journey too.
+    </p>
+    <p class="content-text">And we'll discover together what Jesus meant when He promised life to the full.</p>
+    <p class="content-text">So welcome. I'm honored you're here.</p>
+    <p class="content-text">Let's begin.</p>
+
+    <p class="content-text" style="margin-top: 30px;"><strong>Oladele Adeleye</strong></p>
+
+    <span class="page-number">ii</span>
+  </div>
+
+  <!-- How to Use This Book Page 1 -->
+  <div class="page">
+    <h1 class="page-header">HOW TO USE THIS BOOK</h1>
+
+    <p class="content-text" style="font-size: 14pt; color: #2C5530; text-align: center; margin-bottom: 25px;">
+      <strong>This Is a Journey, Not a Sprint</strong>
+    </p>
+
+    <p class="content-text">
+      Over the next 40 days, you're going to explore what it means to love God with everything you've got. That's not something you can rush. It requires time, reflection, honesty, and the Holy Spirit's work in your heart.
+    </p>
+
+    <p class="content-text"><strong>Here's how to get the most from this journey:</strong></p>
+
+    <div class="numbered-section">
+      <p class="section-number">1.</p>
+      <p class="section-title">COMMIT TO THE FULL 40 DAYS</p>
+      <p class="content-text">This isn't a book you skim or read in one sitting. It's designed to be taken <strong>one day at a time, for 40 days.</strong></p>
+      <p class="content-text">Why 40 days?</p>
+      <p class="content-text">Because the Bible shows us that <strong>40 is the number of transformation:</strong></p>
+      <ul>
+        <li>Noah's world was transformed by 40 days of rain</li>
+        <li>Moses was transformed by 40 days on Mount Sinai</li>
+        <li>The Israelites were tested for 40 years in the wilderness</li>
+        <li>Jesus was empowered by 40 days in the desert</li>
+        <li>The disciples were transformed by 40 days with the risen Christ</li>
+      </ul>
+      <p class="content-text"><strong>Transformation doesn't happen overnight. It happens through consistent, daily encounters with God.</strong></p>
+      <p class="content-text">So don't rush. Commit to the full journey.</p>
+    </div>
+
+    <div class="numbered-section">
+      <p class="section-number">2.</p>
+      <p class="section-title">READ EVERY DAY</p>
+      <p class="content-text">Set aside <strong>15-20 minutes each day</strong> to read that day's chapter and reflect on it.</p>
+      <p class="content-text"><strong>Pick a consistent time:</strong></p>
+      <ul>
+        <li>Early morning before the day starts?</li>
+        <li>During lunch break?</li>
+        <li>Before bed?</li>
+      </ul>
+      <p class="content-text">It doesn't matter when—just be consistent. Consistency creates momentum, and momentum creates transformation.</p>
+      <p class="content-text"><strong>Don't try to read ahead.</strong> Each day builds on the previous one. Trust the process.</p>
+    </div>
+
+    <span class="page-number">iii</span>
+  </div>
+
+  <!-- Day 1 Page 1 -->
+  <div class="page">
+    <div class="day-header">
+      <p class="day-number">DAY 1</p>
+      <h2 class="day-title">IT STARTS WITH A QUESTION</h2>
+    </div>
+
+    <div class="scripture-box">
+      <p class="section-label">OPENING SCRIPTURE</p>
+      <p class="scripture-text">
+        "Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength." — Mark 12:30
+      </p>
+    </div>
+
+    <div class="truth-box">
+      <p class="section-label">TODAY'S TRUTH</p>
+      <p class="truth-text">The most important commandment isn't a suggestion—it's an invitation to the life you were made for.</p>
+    </div>
+
+    <div class="verse-remember">
+      <p class="section-label">VERSE TO REMEMBER</p>
+      <p class="scripture-text">
+        "Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength." — Mark 12:30
+      </p>
+    </div>
+
+    <div class="question-box">
+      <p class="section-label">QUESTION TO CONSIDER</p>
+      <p class="question-text">
+        If someone examined your life—your calendar, your bank account, your thought life—what would they say you love most?
+      </p>
+    </div>
+
+    <div class="decorative-divider">• • • • • • • • •</div>
+
+    <p class="reading-label">DAILY READING</p>
+
+    <div class="main-content">
+      <p>Now that you're saved, then what?</p>
+      <p>It's the question every believer asks—usually around Day 2 of the Christian life. You prayed the prayer. You meant it. You're forgiven, adopted, sealed by the Holy Spirit. Heaven is secured.</p>
+      <p>But now it's Monday morning. And you're wondering: <strong>What does the Christian life actually look like?</strong></p>
+
+      <h3>The Greatest Commandment</h3>
+      <p>When a religious expert asked Jesus to identify the most important commandment, Jesus didn't hesitate:
+        <em>"Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength"</em> (Mark 12:30).
+      </p>
+      <p>Notice what He didn't say. He didn't say, "Go to church regularly." He didn't say, "Read your Bible daily." He didn't say, "Serve in ministry." Those things matter, but they're not the core.</p>
+      <p><strong>The core is love—wholehearted, all-consuming, nothing-held-back love for God.</strong></p>
+      <p>This isn't a suggestion. It's not advice for the spiritually elite. It's the answer to the question: <strong>What does God want from me?</strong></p>
+      <p>He wants your heart.</p>
+    </div>
+
+    <span class="page-number">1</span>
+  </div>
+
+  <!-- Day 1 Page 2 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>The All-Consuming Nature</h3>
+      <p>Look at those words again: <strong>all your heart, all your soul, all your mind, all your strength.</strong></p>
+      <p>Not some. Not most. <strong>All.</strong></p>
+      <p>God isn't interested in partial devotion. He's not content being one priority among many. He's not satisfied with Sundays while the rest of your week belongs to other loves.</p>
+      <p>The Apostle Paul put it bluntly: <em>"For to me, to live is Christ and to die is gain"</em> (Philippians 1:21). Christ wasn't part of Paul's life—<strong>Christ was his life.</strong></p>
+      <p>That's what loving God with everything looks like.</p>
+
+      <h3>Why This Matters</h3>
+      <p>You might be thinking, "That sounds exhausting. Intense. Unrealistic."</p>
+      <p>But here's what most people miss: <strong>This commandment isn't a burden—it's liberation.</strong></p>
+      <p>You were designed to love God with everything. When you do, you're living according to your deepest design. When you don't, you're constantly fighting against how you were made.</p>
+      <p>Jesus said it this way: <em>"I have come that they may have life, and have it to the full"</em> (John 10:10). Full life—<strong>abundant life</strong>—doesn't come from holding back from God. It comes from giving Him everything.</p>
+
+      <h3>The Gap We All Feel</h3>
+      <p>If you're honest, there's probably a gap between what you just read and what you're currently experiencing.</p>
+      <p>You know you should love God with everything. But you're not sure you do. You're not sure you even know how.</p>
+      <p><strong>That's okay. That's why you're here.</strong></p>
+      <p>This 40-day journey exists to close that gap—to move you from knowing you should love God with everything to actually doing it.</p>
+      <p>Not through guilt. Not through performance. But through encounter, transformation, and the power of the Holy Spirit working in you.</p>
+    </div>
+
+    <span class="page-number">2</span>
+  </div>
+
+  <!-- Day 1 Page 3 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>The Invitation</h3>
+      <p>Here's what the next 40 days will do:</p>
+      <p><strong>Days 1-7:</strong> We'll establish the foundation—why loving God with everything is the only response that makes sense.</p>
+      <p><strong>Days 8-17:</strong> We'll lay the groundwork—exclusive devotion, purpose beyond pardon, substance over sentiment.</p>
+      <p><strong>Days 18-29:</strong> We'll pursue transformation—reorienting your life, renewing your mind, nourishing your soul, embracing your new identity.</p>
+      <p><strong>Days 30-37:</strong> We'll explore relationships—abiding in Christ, growing in community, representing Him in the world.</p>
+      <p><strong>Days 38-40:</strong> We'll integrate everything—moving from performance to presence and learning to love God back.</p>
+      <p><strong>This is the roadmap. This is the answer to "Now that I'm saved, then what?"</strong></p>
+
+      <h3>Closing</h3>
+      <p>Loving God with everything isn't something you manufacture through willpower. It's something you discover through encounter, cultivate through practice, and sustain through the Spirit's power.</p>
+      <p>Over the next 40 days, you're going to learn what that looks like.</p>
+      <p>It starts with a question: <strong>What does God want from me?</strong></p>
+      <p>And it leads to an answer: <strong>Everything. And in return, He gives you Himself—which is everything.</strong></p>
+    </div>
+
+    <div class="prayer-box">
+      <p class="prayer-label">PRAYER</p>
+      <p class="prayer-text">
+        Father, I'm starting this journey with honesty: I don't know if I love You with everything. I want to, but I'm not sure I know how. Over these 40 days, teach me. Show me what wholehearted devotion looks like. Transform my love from obligation to delight. In Jesus' name, Amen.
+      </p>
+    </div>
+
+    <span class="page-number">3</span>
+  </div>
+
+  <!-- INTRODUCTION Section Divider (no page-number so Day 2 begins at 4) -->
+  <div class="page section-divider">
+    <h1 class="sd-title">INTRODUCTION</h1>
+    <p class="sd-subtitle">THE CALL</p>
+    <p class="sd-days">DAYS 1-7</p>
+  </div>
+
+  <!-- DAY 2 - Page 1 -->
+  <div class="page">
+    <div class="day-header">
+      <p class="day-number">DAY 2</p>
+      <h2 class="day-title">NOW THAT I'M SAVED, THEN WHAT?</h2>
+    </div>
+
+    <div class="scripture-box">
+      <p class="section-label">OPENING SCRIPTURE</p>
+      <p class="scripture-text">
+        "For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do." — Ephesians 2:10
+      </p>
+    </div>
+
+    <div class="truth-box">
+      <p class="section-label">TODAY'S TRUTH</p>
+      <p class="truth-text">You weren't just saved FROM something—you were saved FOR something.</p>
+    </div>
+
+    <div class="verse-remember">
+      <p class="section-label">VERSE TO REMEMBER</p>
+      <p class="scripture-text">
+        "For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do." — Ephesians 2:10
+      </p>
+    </div>
+
+    <div class="question-box">
+      <p class="section-label">QUESTION TO CONSIDER</p>
+      <p class="question-text">
+        When you think about your salvation, what comes to mind first—what you were saved FROM or what you were saved FOR?
+      </p>
+    </div>
+
+    <div class="decorative-divider">• • • • • • • • •</div>
+
+    <p class="reading-label">DAILY READING</p>
+
+    <div class="main-content">
+      <p>Most Christians can tell you what they were saved from: sin, hell, judgment, death, separation from God.</p>
+      <p>But ask them what they were saved FOR, and the answers get vague.</p>
+      <p>"To go to heaven when I die?" "To be a good person?" "To serve God?"</p>
+      <p>Those aren't wrong, but they're incomplete. And that incompleteness leaves millions of believers wondering: <strong>Now that I'm saved, what am I supposed to do with this salvation?</strong></p>
+    </div>
+
+    <span class="page-number">4</span>
+  </div>
+
+  <!-- DAY 2 - Page 2 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>The Exodus Pattern</h3>
+      <p>God didn't just rescue Israel FROM Egypt—He rescued them TO the Promised Land.</p>
+      <p>Liberation wasn't the end goal. It was the beginning.</p>
+      <p>The same is true for you. Salvation isn't just escape—<strong>it's entrance.</strong> Entrance into relationship, purpose, calling, abundant life.</p>
+
+      <p>Paul makes this explicit in Ephesians 2. First, he establishes salvation by grace:
+        <em>"For it is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God—not by works, so that no one can boast"</em> (Ephesians 2:8-9).
+      </p>
+
+      <p>But he doesn't stop there. Verse 10: <em>"For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do."</em></p>
+      <p>You weren't just saved by grace. <strong>You were saved for works.</strong> Not works that earn salvation, but works that express it.</p>
+
+      <h3>Purpose Beyond Pardon</h3>
+      <p>If salvation is only about forgiveness, then the best thing that could happen after you're saved is for you to die immediately. Heaven secured, no risk of sinning again. Problem solved.</p>
+      <p>But God doesn't operate that way. He saves you, then leaves you on earth. Why?</p>
+      <p><strong>Because salvation has purpose beyond pardon.</strong></p>
+      <p>Jesus said it plainly: <em>"I have come that they may have life, and have it to the full"</em> (John 10:10). Full life—<em>perissos</em> in Greek—means overflowing, abundant, more than enough.</p>
+      <p>Not just survival. <strong>Thriving.</strong></p>
+      <p>Salvation isn't fire insurance. It's not just "you get to go to heaven when you die." It's <strong>abundant life starting now.</strong></p>
+    </div>
+
+    <span class="page-number">5</span>
+  </div>
+
+  <!-- DAY 2 - Page 3 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>The Works Prepared for You</h3>
+      <p>Notice what Ephesians 2:10 says: God prepared good works <strong>in advance</strong> for you to do.</p>
+      <p>Before you were born, God had a plan. Before you knew His name, He knew yours. And woven into your design—your personality, your gifts, your experiences, your passions—are works He prepared specifically for you.</p>
+      <p>Your calling isn't random. It's <strong>custom-designed.</strong></p>
+      <p>This is why you can't find ultimate satisfaction doing someone else's calling. You can only flourish when you're walking in what God prepared for you.</p>
+
+      <h3>What You're Saved For</h3>
+      <p>So what ARE you saved for?</p>
+      <p>Here's the simple answer: <strong>You're saved to love God with everything and live from the overflow of that love.</strong></p>
+      <p>That's it. That's the core.</p>
+      <p>Everything else flows from that. When you love God with everything:</p>
+      <ul>
+        <li>Worship becomes delight, not duty</li>
+        <li>Service flows from overflow, not obligation</li>
+        <li>Relationships reflect Christ's love</li>
+        <li>Work becomes kingdom-building, not just paycheck-earning</li>
+        <li>Suffering has meaning</li>
+        <li>Joy isn't dependent on circumstances</li>
+      </ul>
+      <p><strong>This is what you were saved for.</strong></p>
+    </div>
+
+    <span class="page-number">6</span>
+  </div>
+
+  <!-- DAY 2 - Page 4 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>The Shift Required</h3>
+      <p>Most Christians live focused on what they were saved FROM. That creates a defensive, survival-mode Christianity.</p>
+      <p>But when you understand what you were saved FOR, everything shifts. You move from:</p>
+      <ul>
+        <li>Escaping hell → Pursuing intimacy</li>
+        <li>Avoiding sin → Embracing purpose</li>
+        <li>Surviving → Thriving</li>
+        <li>Minimum viable Christianity → Abundant life</li>
+      </ul>
+      <p>The question isn't just "Am I saved?" The question is "Am I living like I'm saved FOR something?"</p>
+
+      <h3>Closing</h3>
+      <p>Over the next 38 days, we're going to explore what it means to live saved FOR something—to love God with everything and experience the abundant life Jesus promised.</p>
+      <p>Today, just let this sink in: <strong>You weren't just rescued from something. You were rescued for something.</strong></p>
+      <p>And that something is worth everything.</p>
+    </div>
+
+    <div class="prayer-box">
+      <p class="prayer-label">PRAYER</p>
+      <p class="prayer-text">
+        Father, thank You for saving me. Not just FROM sin, but FOR purpose. Help me see my salvation not as an escape plan but as an entrance into abundant life. Show me what You prepared for me to do. And help me live from that overflow. In Jesus' name, Amen.
+      </p>
+    </div>
+
+    <span class="page-number">7</span>
+  </div>
+
+  <!-- DAY 3 - Page 1 -->
+  <div class="page">
+    <div class="day-header">
+      <p class="day-number">DAY 3</p>
+      <h2 class="day-title">THE TREASURE WORTH EVERYTHING</h2>
+    </div>
+
+    <div class="scripture-box">
+      <p class="section-label">OPENING SCRIPTURE</p>
+      <p class="scripture-text">
+        "The kingdom of heaven is like treasure hidden in a field. When a man found it, he hid it again, and then in his joy went and sold all he had and bought that field." — Matthew 13:44
+      </p>
+    </div>
+
+    <div class="truth-box">
+      <p class="section-label">TODAY'S TRUTH</p>
+      <p class="truth-text">
+        When you truly see God as treasure, everything else becomes worthless by comparison—and the trade feels like joy, not sacrifice.
+      </p>
+    </div>
+
+    <div class="verse-remember">
+      <p class="section-label">VERSE TO REMEMBER</p>
+      <p class="scripture-text">
+        "The kingdom of heaven is like treasure hidden in a field. When a man found it, he hid it again, and then in his joy went and sold all he had and bought that field." — Matthew 13:44
+      </p>
+    </div>
+
+    <div class="question-box">
+      <p class="section-label">QUESTION TO CONSIDER</p>
+      <p class="question-text">What does your life reveal you're actually treasuring most?</p>
+    </div>
+
+    <div class="decorative-divider">• • • • • • • • •</div>
+
+    <p class="reading-label">DAILY READING</p>
+
+    <div class="main-content">
+      <p>Jesus told a story about a man who found treasure hidden in a field. The man didn't hesitate. He didn't negotiate. He didn't try to keep his current possessions while also getting the treasure.</p>
+      <p><strong>He sold everything he had to buy that field.</strong></p>
+      <p>Here's what most people miss: the text says he did it <strong>"in his joy."</strong></p>
+      <p>The trade wasn't sacrifice—it was wisdom. Once you've seen the treasure's worth, everything else becomes worthless by comparison.</p>
+    </div>
+
+    <span class="page-number">8</span>
+  </div>
+
+  <!-- DAY 3 - Page 2 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>The Treasure Is God Himself</h3>
+      <p>Most Christians treat God like a vending machine: insert prayer, receive blessing. They want His gifts—provision, protection, guidance, comfort—but not necessarily Him.</p>
+      <p>But here's what the parable reveals: <strong>The treasure isn't what God gives. The treasure is God Himself.</strong></p>
+      <p>David understood this. He wrote: <em>"Whom have I in heaven but you? And earth has nothing I desire besides you"</em> (Psalm 73:25).</p>
+      <p>Not "nothing else I desire." Not "very little else I desire."</p>
+      <p><strong>Nothing.</strong></p>
+      <p>God alone satisfied David's soul. Everything else was secondary.</p>
+      <p>When God is your treasure, you don't serve Him to get things from Him. <strong>You serve Him to get more of Him.</strong></p>
+
+      <h3>Treasure vs. Truth System</h3>
+      <p>There's a massive difference between relating to God as a <strong>truth system</strong> versus treasuring Him as a <strong>person</strong>.</p>
+      <p>A truth system is something you mentally affirm:</p>
+      <ul>
+        <li>God exists ✓</li>
+        <li>Jesus died for my sins ✓</li>
+        <li>The Bible is true ✓</li>
+        <li>Heaven and hell are real ✓</li>
+      </ul>
+      <p>You can check all those boxes and still not treasure God.</p>
+      <p>Even demons have perfect theology. James 2:19 says, <em>"You believe that there is one God. Good! Even the demons believe that—and shudder."</em></p>
+      <p><strong>Believing truths about God isn't the same as treasuring God.</strong></p>
+    </div>
+
+    <span class="page-number">9</span>
+  </div>
+
+  <!-- DAY 3 - Page 3 -->
+  <div class="page">
+    <div class="main-content">
+      <p>When God is your treasure:</p>
+      <ul>
+        <li>You think about Him when you don't have to</li>
+        <li>You miss His presence when it feels distant</li>
+        <li>His pleasure matters more than others' approval</li>
+        <li>You're willing to sacrifice for intimacy with Him</li>
+        <li>Time with Him feels like reward, not duty</li>
+      </ul>
+
+      <h3>The Joyful Exchange</h3>
+      <p>Look again at the man in Jesus' parable. The text doesn't say he "reluctantly sold everything" or "sacrificed all he had."</p>
+      <p>It says <strong>"in his joy" he sold all he had.</strong></p>
+      <p>Why joy? Because once you've seen the treasure, everything else loses its grip on you.</p>
+      <p>Paul experienced this. He had an impressive religious resume—the best education, the right pedigree, impeccable credentials. But after encountering Christ, he wrote:</p>
+      <p><em>"I consider everything a loss because of the surpassing worth of knowing Christ Jesus my Lord, for whose sake I have lost all things. I consider them garbage, that I may gain Christ"</em> (Philippians 3:8).</p>
+      <p><strong>Garbage.</strong> That's how Paul saw his former treasures once he'd tasted Christ.</p>
+      <p>Not because he was trying to be super-spiritual. Because <strong>comparison revealed reality.</strong></p>
+      <p>When you put earthly treasures next to the treasure of knowing Christ, there's no contest.</p>
+    </div>
+
+    <span class="page-number">10</span>
+  </div>
+
+  <!-- DAY 3 - Page 4 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>Your Treasure Inventory</h3>
+      <p>Jesus said, <em>"Where your treasure is, there your heart will be also"</em> (Matthew 6:21).</p>
+      <p>Your treasure isn't what you <strong>say</strong> matters. It's what your <strong>choices</strong> prove matters.</p>
+      <p>Consider these questions:</p>
+      <ul>
+        <li>What do you think about most when your mind is free to wander?</li>
+        <li>What would devastate you most if you lost it?</li>
+        <li>What do you work hardest to obtain or maintain?</li>
+        <li>What do you sacrifice other things for?</li>
+        <li>What occupies most of your time, energy, and money?</li>
+      </ul>
+      <p>The answers reveal your treasure.</p>
+      <p>For some, it's career success. For others, financial security. For many, it's relationships—spouse, kids, friendships. For others, it's comfort, control, or approval.</p>
+      <p><strong>None of those things are bad.</strong> But when they become <strong>treasure</strong>—when you can't imagine life without them, when losing them would undo you—they've become functional gods.</p>
+
+      <h3>The Invitation to Trade</h3>
+      <p>Here's the invitation these 40 days extend:</p>
+      <p><strong>What if you traded everything for the treasure of knowing God?</strong></p>
+      <p>Not traded your possessions (though that might be included). Traded your <strong>allegiance.</strong> Your <strong>affection.</strong> Your <strong>ultimate loyalty.</strong></p>
+    </div>
+
+    <span class="page-number">11</span>
+  </div>
+
+  <!-- DAY 3 - Page 5 -->
+  <div class="page">
+    <div class="main-content">
+      <p>What if God moved from <strong>part of your life</strong> to <strong>center of your life</strong>? From <strong>one priority among many</strong> to <strong>the priority that orders all others</strong>?</p>
+      <p>That's what loving God with everything means.</p>
+      <p>And here's the promise: when you make that trade, you don't lose. <strong>You gain everything that matters.</strong></p>
+      <p>Jesus said, <em>"Whoever finds their life will lose it, and whoever loses their life for my sake will find it"</em> (Matthew 10:39).</p>
+      <p>Paradox: The way to find life is to lose it. The way to gain everything is to give up everything.</p>
+      <p>But when you've seen the treasure, it doesn't feel like loss. <strong>It feels like the best trade you ever made.</strong></p>
+
+      <h3>Closing</h3>
+      <p>Over the next 37 days, you're going to discover what it means to treasure God above everything else.</p>
+      <p>You'll learn how to:</p>
+      <ul>
+        <li>Reorient your life around Him (not just add Him to your life)</li>
+        <li>Renew your mind according to His truth</li>
+        <li>Nourish your soul on His presence</li>
+        <li>Abide in Him rather than strive for Him</li>
+        <li>Live from overflow rather than obligation</li>
+      </ul>
+      <p>But it all starts here, on Day 3, with this question:</p>
+      <p><strong>Is God your treasure, or just part of your portfolio?</strong></p>
+      <p>Be honest. God already knows the answer. This journey is about helping you discover it—and inviting you to make the joyful trade.</p>
+    </div>
+
+    <div class="prayer-box">
+      <p class="prayer-label">PRAYER</p>
+      <p class="prayer-text">
+        Father, I confess that I haven't always treasured You above everything else. I've made idols of good things—career, comfort, relationships, security. Forgive me. Open my eyes to see You as the treasure worth everything. And give me courage to make the joyful trade. In Jesus' name, Amen.
+      </p>
+    </div>
+
+    <span class="page-number">12</span>
+  </div>
+
+  <!-- DAY 4 - Page 1 -->
+  <div class="page">
+    <div class="day-header">
+      <p class="day-number">DAY 4</p>
+      <h2 class="day-title">THE LIFE YOU WERE MADE FOR</h2>
+    </div>
+
+    <div class="scripture-box">
+      <p class="section-label">OPENING SCRIPTURE</p>
+      <p class="scripture-text">"I have come that they may have life, and have it to the full." — John 10:10</p>
+    </div>
+
+    <div class="truth-box">
+      <p class="section-label">TODAY'S TRUTH</p>
+      <p class="truth-text">Abundant life isn't found in comfort, success, or getting everything you want—it's found in giving God everything He deserves.</p>
+    </div>
+
+    <div class="verse-remember">
+      <p class="section-label">VERSE TO REMEMBER</p>
+      <p class="scripture-text">"I have come that they may have life, and have it to the full." — John 10:10</p>
+    </div>
+
+    <div class="question-box">
+      <p class="section-label">QUESTION TO CONSIDER</p>
+      <p class="question-text">Does your Christian life feel full, or does it feel like survival until heaven?</p>
+    </div>
+
+    <div class="decorative-divider">• • • • • • • • •</div>
+
+    <p class="reading-label">DAILY READING</p>
+
+    <div class="main-content">
+      <p>If you surveyed most Christians and asked, "Are you experiencing the abundant life Jesus promised?" you'd get a lot of uncomfortable answers.</p>
+      <p>"Well... I'm saved." "I'm doing okay." "It's better than it used to be." "I'm hanging in there."</p>
+      <p>That's not abundance. That's survival.</p>
+      <p><strong>So what happened? Why the gap between Jesus' promise and most believers' experience?</strong></p>
+    </div>
+
+    <span class="page-number">13</span>
+  </div>
+
+  <!-- DAY 4 - Page 2 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>What Abundant Life Isn't</h3>
+      <p>First, let's clear up what <em>perissos</em> life—abundant life—doesn't mean.</p>
+      <p>It doesn't mean:</p>
+      <ul>
+        <li><strong>Constant comfort:</strong> Jesus promised tribulation (John 16:33)</li>
+        <li><strong>Financial prosperity:</strong> Paul knew both plenty and want (Philippians 4:12)</li>
+        <li><strong>Perfect health:</strong> Paul had a "thorn in the flesh" (2 Corinthians 12:7)</li>
+        <li><strong>Problem-free existence:</strong> James said to "consider it pure joy when you face trials" (James 1:2)</li>
+      </ul>
+      <p>If abundant life meant those things, Jesus Himself didn't experience it. He had no place to lay His head (Matthew 8:20), faced constant opposition, and died on a cross.</p>
+      <p><strong>Clearly, abundance doesn't equal ease.</strong></p>
+
+      <h3>What Abundant Life Is</h3>
+      <p>So what IS <em>perissos</em> life?</p>
+      <p>The Greek word means <strong>overflowing, exceeding, more than enough.</strong></p>
+      <p>It's life that's:</p>
+      <ul>
+        <li><strong>Deeply connected to God</strong> (not distant or transactional)</li>
+        <li><strong>Filled with purpose</strong> (not aimless or empty)</li>
+        <li><strong>Rich in meaning</strong> (even when circumstances are hard)</li>
+        <li><strong>Sustained by hope</strong> (not dependent on external factors)</li>
+        <li><strong>Flowing with love</strong> (giving from overflow, not need)</li>
+      </ul>
+      <p>Paul captured this when he wrote: <em>"I have learned to be content whatever the circumstances"</em> (Philippians 4:11).</p>
+      <p>Content in prison. Content in beatings. Content in shipwrecks.</p>
+      <p>How? Because his abundance wasn't circumstantial—<strong>it was relational.</strong></p>
+      <p>He had Christ. And Christ was enough.</p>
+    </div>
+
+    <span class="page-number">14</span>
+  </div>
+
+  <!-- DAY 4 - Page 3 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>The Minimum Viable Christianity Problem</h3>
+      <p>Many believers live what I call "minimum viable Christianity":</p>
+      <ul>
+        <li>Enough Jesus to secure eternity</li>
+        <li>Not enough Jesus to transform today</li>
+      </ul>
+      <p>They've accepted the forgiveness package but declined the transformation package.</p>
+      <p>The result? Lives that look mostly like everyone else's—same anxieties, same priorities, same emptiness—just with a Jesus bumper sticker.</p>
+      <p><strong>That's not what Jesus died for.</strong></p>
+      <p>He didn't endure the cross so you could have fire insurance and a slightly moralized version of the life you were already living.</p>
+      <p>He died to give you <strong>new life.</strong> Not improved old life—<strong>new life.</strong></p>
+      <p>Paul wrote: <em>"I have been crucified with Christ and I no longer live, but Christ lives in me"</em> (Galatians 2:20).</p>
+      <p>That's abundant life: <strong>Christ living through you</strong>, not you trying harder to live for Christ.</p>
+
+      <h3>The Source of Fullness</h3>
+      <p>Here's the secret to abundant life that most people miss:</p>
+      <p><strong>Fullness comes from connection to the Source, not from accumulating stuff.</strong></p>
+      <p>Jesus said, <em>"I am the vine; you are the branches. If you remain in me and I in you, you will bear much fruit; apart from me you can do nothing"</em> (John 15:5).</p>
+      <p>Notice: The branch doesn't produce fruit through effort. <strong>The branch produces fruit through connection.</strong></p>
+      <p>When you're connected to Christ (abiding, remaining, staying plugged in), abundance flows naturally. When you're disconnected, no amount of striving produces life.</p>
+      <p>Most Christians are exhausted because they're trying to produce fruit through willpower instead of receiving it through connection.</p>
+    </div>
+
+    <span class="page-number">15</span>
+  </div>
+
+  <!-- DAY 4 - Page 4 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>The Invitation to Fullness</h3>
+      <p>Jesus' invitation is simple: <em>"Come that they may have life, and have it to the full"</em> (John 10:10).</p>
+      <p>Not "work hard and maybe you'll earn abundant life." Not "try harder and you might achieve fullness."</p>
+      <p><strong>Come.</strong></p>
+      <p>Just come. To Him. For Him. With empty hands and honest hearts.</p>
+      <p>Over the next 36 days, you're going to learn what it means to live connected to the Vine, to abide in Christ, to draw life from the Source.</p>
+      <p>And when you do, you'll discover what you've been searching for in everything else: <strong>satisfaction that circumstances can't steal.</strong></p>
+      <p>That's the life you were made for. That's the abundance Jesus promises.</p>
+      <p><strong>Not ease. Not comfort. Not success.</strong></p>
+      <p><strong>Just Him. Which turns out to be everything.</strong></p>
+
+      <h3>Closing</h3>
+      <p>If you're honest, your Christian life probably feels more like minimum viable than abundant overflow.</p>
+      <p>That's okay. That's why you're here.</p>
+      <p>For the next 36 days, you're going to learn what fullness actually looks like—and discover that it's been available all along. You just didn't know how to access it.</p>
+      <p>Today, just receive this truth: <strong>Jesus came to give you abundant life. Not someday. Not eventually. Starting now.</strong></p>
+    </div>
+
+    <div class="prayer-box">
+      <p class="prayer-label">PRAYER</p>
+      <p class="prayer-text">
+        Jesus, I confess that I've settled for minimum viable Christianity. I've accepted forgiveness but not pursued fullness. I want the abundant life You promised—not comfort, but connection. Not ease, but overflow. Teach me what that looks like. In Your name, Amen.
+      </p>
+    </div>
+
+    <span class="page-number">16</span>
+  </div>
+
+  <!-- DAY 5 - Page 1 -->
+  <div class="page">
+    <div class="day-header">
+      <p class="day-number">DAY 5</p>
+      <h2 class="day-title">EXCLUSIVE DEVOTION</h2>
+    </div>
+
+    <div class="scripture-box">
+      <p class="section-label">OPENING SCRIPTURE</p>
+      <p class="scripture-text">"You shall have no other gods before Me." — Exodus 20:3</p>
+    </div>
+
+    <div class="truth-box">
+      <p class="section-label">TODAY'S TRUTH</p>
+      <p class="truth-text">God doesn't just want first place in your life—He demands it, because only He deserves it and only He can satisfy.</p>
+    </div>
+
+    <div class="verse-remember">
+      <p class="section-label">VERSE TO REMEMBER</p>
+      <p class="scripture-text">"You shall have no other gods before Me." — Exodus 20:3</p>
+    </div>
+
+    <div class="question-box">
+      <p class="section-label">QUESTION TO CONSIDER</p>
+      <p class="question-text">What are you tempted to give the devotion that belongs to God alone?</p>
+    </div>
+
+    <div class="decorative-divider">• • • • • • • • •</div>
+
+    <p class="reading-label">DAILY READING</p>
+
+    <div class="main-content">
+      <p>The first commandment is not a suggestion.</p>
+      <p>God didn't say, "You shall try to avoid having other gods." He didn't say, "You shall prefer Me over other gods."</p>
+      <p>He said: <strong>"You shall have NO other gods before Me."</strong></p>
+      <p>That's not gentle advice. That's a demand.</p>
+      <p>And if you're uncomfortable with God demanding exclusive devotion, you need to ask yourself: <strong>Why?</strong></p>
+    </div>
+
+    <span class="page-number">17</span>
+  </div>
+
+  <!-- DAY 5 - Page 2 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>The Demand for Exclusivity</h3>
+      <p>In our culture, demanding exclusive devotion sounds needy, insecure, even toxic.</p>
+      <p>"Don't tell me what to do with my heart." "I can love multiple things." "Why does God need to be first?"</p>
+      <p>But God's demand isn't rooted in insecurity—<strong>it's rooted in reality.</strong></p>
+      <p>He doesn't demand exclusive devotion because He's insecure. He demands it because:</p>
+      <ol>
+        <li><strong>He alone is God</strong> (there is no other)</li>
+        <li><strong>He alone created you</strong> (you exist because He spoke)</li>
+        <li><strong>He alone sustains you</strong> (every breath is His gift)</li>
+        <li><strong>He alone can satisfy</strong> (nothing else will fill the God-shaped hole)</li>
+      </ol>
+      <p>When God demands exclusive devotion, He's not being unreasonable. <strong>He's telling you the truth about reality.</strong></p>
+
+      <h3>The Problem of Divided Hearts</h3>
+      <p>Jesus said, <em>"No one can serve two masters. Either you will hate the one and love the other, or you will be devoted to the one and despise the other"</em> (Matthew 6:24).</p>
+      <p>You can't split your ultimate allegiance.</p>
+      <p>Oh, you can try. Most people do. They give God Sundays and keep Monday through Saturday for themselves. They pray before meals but live for career advancement. They sing worship songs but treasure comfort.</p>
+      <p><strong>But a divided heart is a tormented heart.</strong></p>
+      <p>When you try to serve two masters, you live in constant internal conflict:</p>
+      <ul>
+        <li>Part of you wants to pursue God; part wants to pursue success</li>
+        <li>Part wants holiness; part wants comfort</li>
+        <li>Part wants intimacy; part wants independence</li>
+      </ul>
+      <p><strong>You can't have both. You have to choose.</strong></p>
+    </div>
+
+    <span class="page-number">18</span>
+  </div>
+
+  <!-- DAY 5 - Page 3 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>Modern Idols</h3>
+      <p>When we hear "no other gods," we think of golden statues and pagan altars.</p>
+      <p>But idols today look different. They're not made of wood and stone—<strong>they're made of good things we've made ultimate things.</strong></p>
+      <p>An idol is anything you:</p>
+      <ul>
+        <li><strong>Can't imagine living without</strong></li>
+        <li><strong>Look to for ultimate security</strong></li>
+        <li><strong>Would sacrifice moral principles to obtain or keep</strong></li>
+        <li><strong>Think about more than God</strong></li>
+        <li><strong>Get your identity from</strong></li>
+      </ul>
+      <p>For many, the idol is career: "If I succeed, I matter." For others, it's relationships: "If I'm loved, I'm valuable." For some, it's comfort: "If I'm safe, I'm okay." For others, it's control: "If I manage everything, I'll be fine."</p>
+      <p><strong>None of those things are bad. But when they become gods, they destroy you.</strong></p>
+      <p>Because only God can bear the weight of being your ultimate hope.</p>
+
+      <h3>The Freedom of Exclusive Devotion</h3>
+      <p>Here's what sounds crazy but is actually true:</p>
+      <p><strong>Giving God exclusive devotion doesn't restrict your freedom—it creates it.</strong></p>
+      <p>When God is your only ultimate allegiance:</p>
+      <ul>
+        <li>You can enjoy career success without needing it to define you</li>
+        <li>You can love people without needing them to complete you</li>
+        <li>You can pursue goals without needing them to validate you</li>
+        <li>You can face loss without being destroyed by it</li>
+      </ul>
+      <p>Everything becomes a <strong>gift</strong> instead of a <strong>god.</strong></p>
+      <p>And that's liberation.</p>
+    </div>
+
+    <span class="page-number">19</span>
+  </div>
+
+  <!-- DAY 5 - Page 4 -->
+  <div class="page">
+    <div class="main-content">
+      <p>Paul wrote: <em>"I have learned the secret of being content in any and every situation"</em> (Philippians 4:12).</p>
+      <p>The secret? <strong>His ultimate satisfaction was in Christ, not circumstances.</strong></p>
+      <p>When Christ is your treasure, everything else can be held loosely. You can enjoy without clinging. You can receive without grasping.</p>
+      <p><strong>That's freedom.</strong></p>
+
+      <h3>The Test of Exclusivity</h3>
+      <p>Want to know if God has exclusive devotion in your life?</p>
+      <p>Ask yourself:</p>
+      <ul>
+        <li><strong>If God asked you to give up [fill in the blank], would you?</strong></li>
+        <li><strong>If you lost [fill in the blank], would you still worship God?</strong></li>
+        <li><strong>If following God cost you [fill in the blank], would you still follow?</strong></li>
+      </ul>
+      <p>Whatever you can't imagine surrendering is probably an idol.</p>
+      <p>Whatever would devastate you to lose (besides God) is probably a god.</p>
+      <p><strong>Exclusive devotion means God gets veto power over everything else.</strong></p>
+      <p>Not because He's controlling, but because He's worthy. And because you trust that <strong>what He asks you to release, He replaces with Himself—which is better.</strong></p>
+
+      <h3>Closing</h3>
+      <p>For the next 35 days, we're going to explore what exclusive devotion looks like practically.</p>
+      <p>But today, just sit with this truth:</p>
+      <p><strong>God demands exclusive devotion—not because He's needy, but because He's worthy. And because only He can satisfy the hunger He created in you.</strong></p>
+      <p>The question isn't whether you'll give ultimate devotion to something. You will. You're designed to worship.</p>
+      <p><strong>The question is: What will you worship?</strong></p>
+    </div>
+
+    <div class="prayer-box">
+      <p class="prayer-label">PRAYER</p>
+      <p class="prayer-text">
+        Father, I confess I've given devotion to things that don't deserve it—career, comfort, approval, control. Forgive me. You alone are God. You alone are worthy. Help me give You the exclusive devotion You deserve. And show me what needs to be dethroned in my heart. In Jesus' name, Amen.
+      </p>
+    </div>
+
+    <span class="page-number">20</span>
+  </div>
+
+  <!-- DAY 6 - Page 1 -->
+  <div class="page">
+    <div class="day-header">
+      <p class="day-number">DAY 6</p>
+      <h2 class="day-title">FIRST LOVE LOST</h2>
+    </div>
+
+    <div class="scripture-box">
+      <p class="section-label">OPENING SCRIPTURE</p>
+      <p class="scripture-text">"Yet I hold this against you: You have forsaken the love you had at first." — Revelation 2:4</p>
+    </div>
+
+    <div class="truth-box">
+      <p class="section-label">TODAY'S TRUTH</p>
+      <p class="truth-text">You can have sound doctrine, faithful service, and moral integrity—and still lose your first love for God.</p>
+    </div>
+
+    <div class="verse-remember">
+      <p class="section-label">VERSE TO REMEMBER</p>
+      <p class="scripture-text">"Yet I hold this against you: You have forsaken the love you had at first." — Revelation 2:4</p>
+    </div>
+
+    <div class="question-box">
+      <p class="section-label">QUESTION TO CONSIDER</p>
+      <p class="question-text">
+        When you first came to faith, what captivated you about Jesus? How does your relationship with Him feel now?
+      </p>
+    </div>
+
+    <div class="decorative-divider">• • • • • • • • •</div>
+
+    <p class="reading-label">DAILY READING</p>
+
+    <div class="main-content">
+      <p>The church at Ephesus had everything going for them.</p>
+      <p>They had <strong>sound doctrine</strong>—they couldn't tolerate false teaching. They had <strong>faithful service</strong>—they worked hard and didn't give up. They had <strong>moral integrity</strong>—they endured hardships for Christ's name.</p>
+      <p>By most measures, they were a model church.</p>
+      <p>But Jesus had one devastating critique: <em>"You have forsaken the love you had at first"</em> (Revelation 2:4).</p>
+      <p><strong>They'd lost their first love.</strong></p>
+      <p><strong>You can have all the right behaviors and still lose your heart for God.</strong></p>
+    </div>
+
+    <span class="page-number">21</span>
+  </div>
+
+  <!-- DAY 6 - Page 2 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>What First Love Looks Like</h3>
+      <p>Think back to when you first encountered Jesus.</p>
+      <p>Maybe it was dramatic—a sudden conversion, a radical rescue. Or maybe it was gradual—a slow awakening to His reality.</p>
+      <p>But either way, there was probably a season when:</p>
+      <ul>
+        <li><strong>You couldn't stop thinking about Him</strong></li>
+        <li><strong>Reading Scripture felt like discovering treasure</strong></li>
+        <li><strong>Prayer felt like conversation, not monologue</strong></li>
+        <li><strong>Worship brought tears, not boredom</strong></li>
+        <li><strong>You told everyone about Him</strong></li>
+      </ul>
+      <p>That's first love. <strong>Captivation. Fascination. Devotion that flows naturally, not forced.</strong></p>
+      <p>The Apostle Paul described it this way: <em>"For to me, to live is Christ and to die is gain"</em> (Philippians 1:21).</p>
+      <p>Christ wasn't part of Paul's life—<strong>Christ was his life.</strong> That's first love.</p>
+
+      <h3>How First Love Gets Lost</h3>
+      <p>First love doesn't usually die dramatically. It erodes gradually.</p>
+      <p>You don't wake up one day and decide, "I'm going to stop loving Jesus." Instead, you:</p>
+      <ul>
+        <li>Get busy with ministry and forget why you started</li>
+        <li>Master theology but lose wonder</li>
+        <li>Perfect religious routine but lose spontaneous joy</li>
+        <li>Serve faithfully but from duty, not delight</li>
+      </ul>
+      <p><strong>You're still doing Christian things. But your heart isn't in it anymore.</strong></p>
+      <p>The writer of Hebrews warned: <em>"See to it, brothers and sisters, that none of you has a sinful, unbelieving heart that turns away from the living God"</em> (Hebrews 3:12).</p>
+      <p>Notice: You can turn away from God while still showing up to church, reading your Bible, and serving in ministry.</p>
+      <p><strong>Your actions can stay orthodox while your heart drifts.</strong></p>
+    </div>
+
+    <span class="page-number">22</span>
+  </div>
+
+  <!-- DAY 6 - Page 3 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>The Danger of Orthodoxy Without Affection</h3>
+      <p>Jesus encountered this constantly with the Pharisees.</p>
+      <p>They had the best theology. They knew Scripture inside and out. They followed every rule meticulously.</p>
+      <p>But Jesus said to them: <em>"These people honor me with their lips, but their hearts are far from me"</em> (Matthew 15:8).</p>
+      <p><strong>Perfect orthodoxy. Zero intimacy.</strong></p>
+      <p>The Pharisees prove that you can:</p>
+      <ul>
+        <li>Know all the right answers</li>
+        <li>Maintain all the right behaviors</li>
+        <li>Defend all the right doctrines</li>
+      </ul>
+      <p><strong>And still not love God.</strong></p>
+      <p>James put it bluntly: <em>"You believe that there is one God. Good! Even the demons believe that—and shudder"</em> (James 2:19).</p>
+      <p>Demons have perfect theology. But they don't love God.</p>
+      <p><strong>Right beliefs without relational affection is just religious information.</strong></p>
+
+      <h3>The Ache Beneath Religion</h3>
+      <p>If you've lost your first love, you probably feel it.</p>
+      <p>There's an <strong>ache</strong>—a sense that something's missing.</p>
+      <p>Worship songs speak of intimacy you're not experiencing. Prayers feel like monologues to the ceiling. Scripture promises living water, but your soul feels like drought.</p>
+      <p>You do all the right things, but <strong>it feels mechanical. Empty. Dutiful.</strong></p>
+      <p><strong>Here's the good news: That ache isn't condemnation. It's invitation.</strong></p>
+      <p>The Holy Spirit creates that discomfort because He wants more for you than religious performance. He's awakening hunger for what you were made for: <strong>genuine, affectionate relationship with God.</strong></p>
+      <p>David understood this ache. He wrote: <em>"As the deer pants for streams of water, so my soul pants for you, my God"</em> (Psalm 42:1).</p>
+      <p>That's not the language of religious duty. <strong>That's the language of desperate desire.</strong></p>
+    </div>
+
+    <span class="page-number">23</span>
+  </div>
+
+  <!-- DAY 6 - Page 4 -->
+  <div class="page">
+    <div class="main-content">
+      <h3>The Path Back to First Love</h3>
+      <p>Jesus didn't just diagnose the Ephesians' problem—He prescribed the solution:</p>
+      <p><em>"Consider how far you have fallen! Repent and do the things you did at first"</em> (Revelation 2:5).</p>
+
+      <p>Three steps:</p>
+      <p><strong>1. Remember:</strong> Think back to your first love. What was it like? What captivated you?</p>
+      <p><strong>2. Repent:</strong> Acknowledge that you've drifted. Don't minimize it or excuse it. Just be honest: "I've lost my first love."</p>
+      <p><strong>3. Return:</strong> Do the things you did at first—not out of duty, but to rekindle the relationship.</p>
+
+      <p>When you first loved Jesus, you probably:</p>
+      <ul>
+        <li>Spent time with Him without checking the clock</li>
+        <li>Talked to Him spontaneously throughout the day</li>
+        <li>Read Scripture hungrily, not dutifully</li>
+        <li>Worshiped with abandon, not self-consciousness</li>
+      </ul>
+      <p><strong>What if you did those things again—not to perform, but to reconnect?</strong></p>
+
+      <h3>Closing</h3>
+      <p>If you're reading this and thinking, "I've lost my first love," don't panic.</p>
+      <p><strong>The fact that you recognize it means the Holy Spirit is at work.</strong> He's stirring hunger. He's creating dissatisfaction with status quo. He's inviting you back.</p>
+      <p>Over the next 34 days, we're going to explore what it means to rekindle first love—to move from religious duty to relational delight.</p>
+      <p>But today, just be honest with God:</p>
+      <p><em>"I've lost my first love. I want it back. Show me the way home."</em></p>
+      <p><strong>He's been waiting for you to say that.</strong></p>
+    </div>
+
+    <div class="prayer-box">
+      <p class="prayer-label">PRAYER</p>
+      <p class="prayer-text">
+        Jesus, I confess: I've lost my first love. I still believe in You. I still serve You. But my heart isn't captivated like it once was. Forgive me. Rekindle the fire. Awaken the hunger. Bring me back to that place of wonder and delight. I don't want religion—I want relationship. In Your name, Amen.
+      </p>
+    </div>
+
+    <span class="page-number">24</span>
+  </div>
+
+  <!-- ===== MINI RECAP: WEEK 1 ===== -->
+  <div class="page section-divider">
+    <h1 class="sd-title">WEEK 1 RECAP</h1>
+    <p class="sd-subtitle">THE CALL — Days 1–7</p>
+    <p class="sd-days">FOUNDATION LAID: Treasure God, pursue fullness, return to first love, and taste for yourself.</p>
+  </div>
+
+  <!-- ===== PART 1 DIVIDER: FOUNDATIONS (Days 8–17) ===== -->
+  <div class="page section-divider">
+    <h1 class="sd-title">FOUNDATIONS</h1>
+    <p class="sd-subtitle">PART 1</p>
+    <p class="sd-days">DAYS 8–17</p>
+  </div>
+
+  
